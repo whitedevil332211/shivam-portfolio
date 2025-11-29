@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shivam Kumar | E‑Commerce Portfolio</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Shop Shivam Kumar's e-commerce demo showcasing modern web development, SEO optimization, and creative design.">
+  <meta name="keywords" content="Shivam Kumar, E-commerce, Portfolio, Web Development, SEO, Bootstrap, Online Store, Delhi">
+  <meta name="author" content="Shivam Kumar">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (Social Sharing) -->
+  <meta property="og:title" content="E‑Commerce Homepage - Shivam Kumar Portfolio">
+  <meta property="og:description" content="Explore Shivam Kumar’s e-commerce homepage demo with product listings, responsive design, and SEO tags.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whitedevil332211.github.io/shivam-portfolio/ecommerce">
+  <meta property="og:image" content="https://whitedevil332211.github.io/shivam-portfolio/ecommerce-preview.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="E‑Commerce Homepage - Shivam Kumar Portfolio">
+  <meta name="twitter:description" content="Bootstrap-based e-commerce homepage demo with SEO optimization and product showcase.">
+  <meta name="twitter:image" content="https://whitedevil332211.github.io/shivam-portfolio/ecommerce-preview.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Shivam Store",
+    "url": "https://whitedevil332211.github.io/shivam-portfolio/ecommerce",
+    "logo": "https://whitedevil332211.github.io/shivam-portfolio/ecommerce-preview.jpg",
+    "image": "https://whitedevil332211.github.io/shivam-portfolio/ecommerce-preview.jpg",
+    "description": "Demo e-commerce homepage showcasing Shivam Kumar's portfolio in web development and SEO.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Delhi",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://github.com/whitedevil332211",
+      "https://linkedin.com/in/shivam"
+    ],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Product One",
+          "image": "https://via.placeholder.com/400x250",
+          "description": "High-quality demo product showcasing Bootstrap card layout.",
+          "sku": "P001",
+          "brand": { "@type": "Brand", "name": "Shivam Brand" }
+        },
+        "priceCurrency": "USD",
+        "price": "49.99",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Product Two",
+          "image": "https://via.placeholder.com/400x250",
+          "description": "Responsive design ensures this product looks great on all devices.",
+          "sku": "P002",
+          "brand": { "@type": "Brand", "name": "Shivam Brand" }
+        },
+        "priceCurrency": "USD",
+        "price": "79.99",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Product Three",
+          "image": "https://via.placeholder.com/400x250",
+          "description": "SEO-friendly product description with keyword optimization.",
+          "sku": "P003",
+          "brand": { "@type": "Brand", "name": "Shivam Brand" }
+        },
+        "priceCurrency": "USD",
+        "price": "99.99",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body { background-color: #f8f9fa; font-family: 'Montserrat', sans-serif; }
+    .navbar { background-color: #111; }
+    .navbar a { color: #00ffcc !important; font-weight: bold; }
+    .hero { padding: 80px 20px; text-align: center; background: linear-gradient(90deg, #0d0d0d, #1a1a1a); color: #fff; }
+    .hero h1 { font-size: 3rem; color: #00ffcc; }
+    .product-card { transition: transform 0.3s; }
+    .product-card:hover { transform: scale(1.05); }
+    footer { background: #111; color: #888; text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand text-info fw-bold" href="#">Shivam Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon bg-info"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to Shivam’s E‑Commerce Demo</h1>
+      <p class="lead">A modern, SEO‑optimized online store built with Bootstrap.</p>
+      <a href="#products" class="btn btn-info text-dark fw-bold mt-3">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-5">
+    <div class="container">
+      <h2 class="text-info mb-4">Featured Products</h2>
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-md-4">
+          <div class="card product-card h-100">
+            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Product 1 - Shivam Store">
+            <div class="card-body">
+              <h5 class="card-title">Product One</h5>
+              <p class="card-text">High-quality demo product showcasing Bootstrap card layout.</p>
+              <p class="fw-bold text-info">$49.99</p>
+              <a href="#" class="btn btn-outline-info">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-4">
+          <div class="card product-card h-100">
+            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Product 2 - Shivam Store">
+            <div class="card-body">
+              <h5 class="card-title">Product Two</h5>
+              <p class="card-text">Responsive design ensures this product looks great on all devices.</p>
+              <p class="fw-bold text-info">$79.99</p>
+              <a href="#" class="btn btn-outline-info">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-4">
+          <div class="card product-card h-100">
+            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Product 3 - Shivam Store">
+            <div class="card-body">
+              <h5 class="card-title">Product Three</h5>
+              <p class="card-text">SEO‑friendly product description with keyword optimization.</p>
+              <p class="fw-bold text-info">$99.99</p>
+              <a href="#" class="btn btn-outline-info">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+            </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-dark text-light">
+    <div class="container">
+      <h2 class="text-info mb-4">About This Store</h2>
+      <p>
+        This e‑commerce demo is part of <strong>Shivam Kumar’s portfolio</strong>.  
+        It showcases skills in <strong>web development, SEO optimization, and responsive design</strong>.  
+        The goal is to demonstrate how modern online stores can be built with clarity, accessibility, and creativity.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-info mb-4">Contact</h2>
+      <p>Email: <a href="mailto:shivamkumarsingh05122003@gmail.com" class="text-info">shivamkumarsingh05122003@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/shivam" class="text-info">linkedin.com/in/shivam</a></p>
+      <p>GitHub: <a href="https://github.com/whitedevil332211" class="text-info">github.com/whitedevil332211</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Shivam Kumar. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
