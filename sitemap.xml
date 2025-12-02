@@ -1,19 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
   <url>
     <loc>https://whitedevil332211.github.io/shivam-portfolio/</loc>
     <priority>1.0</priority>
   </url>
+
+  <!-- Portfolio Sections -->
   <url>
     <loc>https://whitedevil332211.github.io/shivam-portfolio/about.html</loc>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://whitedevil332211.github.io/shivam-portfolio/skill.html</loc>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://whitedevil332211.github.io/shivam-portfolio/project.html</loc>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://whitedevil332211.github.io/shivam-portfolio/blog.html</loc>
+    <loc>https://whitedevil332211.github.io/shivam-portfolio/creative.html</loc>
+    <priority>0.7</priority>
   </url>
+
+  <!-- Blog Section -->
+  <url>
+    <loc>https://whitedevil332211.github.io/shivam-portfolio/blog.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://whitedevil332211.github.io/shivam-portfolio/Why-socket-programming-still-powers-real-time-systems.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- E-Commerce Demo Pages -->
+  <url>
+    <loc>https://whitedevil332211.github.io/shivam-portfolio/ecommerce.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://whitedevil332211.github.io/shivam-portfolio/ecommerce-login.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://whitedevil332211.github.io/shivam-portfolio/#contact</loc>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
