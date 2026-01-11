@@ -1,0 +1,13 @@
+Subject: Frontend/UI Portfolio — Shivam Kumar
+
+Hi [receiver name],
+
+I’m Shivam, a web designer and developer specializing in responsive UI/UX and clean frontend execution. I’ve built a Zomato‑style food discovery web app (live listings, detail pages, responsive design) that you can review here:
+
+Resume: https://whitedevil332211.github.io/shivam-portfolio/shivam_resume.html
+Project: https://whitedevil332211.github.io/shivam-portfolio/
+
+I’m immediately available for Web Design & Development roles. Would you be open to a quick chat?
+
+Best regards,
+Shivam Kumar
