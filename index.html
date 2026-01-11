@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FoodieHub - Inspired by Zomato</title>
+  <title>FoodieHub - Zomato Inspired</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', Arial, sans-serif;
       margin: 0;
       background: #fafafa;
     }
+    /* Navbar */
     nav {
       background: #e23744;
       color: white;
@@ -17,22 +18,39 @@
       justify-content: space-between;
       align-items: center;
     }
-    nav input {
+    nav .left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    nav select, nav input {
       padding: 0.5rem;
       border: none;
       border-radius: 4px;
+    }
+    nav input {
       width: 250px;
     }
+    /* Hero */
     .hero {
       text-align: center;
-      padding: 2rem;
-      background: #ffe5e5;
+      padding: 3rem 1rem;
+      background: url('https://via.placeholder.com/1200x400?text=Food+Banner') center/cover no-repeat;
+      color: white;
     }
+    .hero h2 {
+      background: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+    }
+    /* Categories */
     .categories {
       display: flex;
       justify-content: center;
       gap: 1rem;
       margin: 2rem;
+      flex-wrap: wrap;
     }
     .categories .card {
       background: white;
@@ -44,10 +62,12 @@
     }
     .categories .card:hover {
       transform: scale(1.05);
+      background: #ffe5e5;
     }
+    /* Restaurant Grid */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 1.5rem;
       padding: 2rem;
     }
@@ -55,8 +75,7 @@
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 1rem;
-      text-align: center;
+      overflow: hidden;
       transition: transform 0.2s ease;
     }
     .grid .card:hover {
@@ -64,9 +83,19 @@
     }
     .card-img {
       width: 100%;
-      height: 150px;
+      height: 180px;
       object-fit: cover;
-      border-radius: 6px;
+    }
+    .card-content {
+      padding: 1rem;
+    }
+    .card-content h3 {
+      margin: 0.5rem 0;
+      color: #e23744;
+    }
+    .card-content p {
+      margin: 0.2rem 0;
+      color: #555;
     }
     footer {
       text-align: center;
@@ -80,14 +109,21 @@
   <!-- Navbar -->
   <header>
     <nav>
-      <h1>FoodieHub</h1>
-      <input type="text" id="search" placeholder="Search restaurants...">
+      <div class="left">
+        <h1>FoodieHub</h1>
+        <select id="location">
+          <option>Delhi</option>
+          <option>Noida</option>
+          <option>Gurgaon</option>
+        </select>
+      </div>
+      <input type="text" id="search" placeholder="Search for restaurants or cuisines...">
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h2>Discover the best food & drinks in Delhi</h2>
+    <h2>Discover the best food & drinks near you</h2>
   </section>
 
   <!-- Categories -->
@@ -96,6 +132,7 @@
     <div class="card">🍔 Burgers</div>
     <div class="card">🍲 Indian</div>
     <div class="card">🍰 Desserts</div>
+    <div class="card">🥗 Healthy</div>
   </section>
 
   <!-- Restaurant Listing -->
@@ -103,7 +140,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 FoodieHub</p>
+    <p>© 2026 FoodieHub | Inspired by Zomato</p>
   </footer>
 
   <!-- JavaScript -->
@@ -114,28 +151,28 @@
         cuisine: "Indian",
         rating: 4.5,
         price: "₹₹",
-        image: "https://via.placeholder.com/300x150?text=Spicy+Treats"
+        image: "https://via.placeholder.com/400x200?text=Spicy+Treats"
       },
       {
         name: "Pizza Mania",
         cuisine: "Italian",
         rating: 4.2,
         price: "₹₹₹",
-        image: "https://via.placeholder.com/300x150?text=Pizza+Mania"
+        image: "https://via.placeholder.com/400x200?text=Pizza+Mania"
       },
       {
         name: "Sweet Tooth",
         cuisine: "Desserts",
         rating: 4.8,
         price: "₹₹",
-        image: "https://via.placeholder.com/300x150?text=Sweet+Tooth"
+        image: "https://via.placeholder.com/400x200?text=Sweet+Tooth"
       },
       {
         name: "Burger Hub",
         cuisine: "Fast Food",
         rating: 4.0,
         price: "₹",
-        image: "https://via.placeholder.com/300x150?text=Burger+Hub"
+        image: "https://via.placeholder.com/400x200?text=Burger+Hub"
       }
     ];
 
@@ -147,9 +184,11 @@
         card.className = "card";
         card.innerHTML = `
           <img src="${rest.image}" alt="${rest.name}" class="card-img">
-          <h3>${rest.name}</h3>
-          <p>${rest.cuisine}</p>
-          <p>⭐ ${rest.rating} | ${rest.price}</p>
+          <div class="card-content">
+            <h3>${rest.name}</h3>
+            <p>${rest.cuisine}</p>
+            <p>⭐ ${rest.rating} | ${rest.price}</p>
+          </div>
         `;
         container.appendChild(card);
       });
