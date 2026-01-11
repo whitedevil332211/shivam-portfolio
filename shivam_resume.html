@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shivam – Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --bg:#f8f9fb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --primary:#e23744;
+      --accent:#111827;
+      --chip:#f1f5f9;
+      --chip-text:#0f172a;
+      --border:#e5e7eb;
+    }
+    .dark{
+      --bg:#0b0f14;
+      --card:#0f141a;
+      --text:#e5e7eb;
+      --muted:#9aa3af;
+      --primary:#ff5060;
+      --accent:#f8fafc;
+      --chip:#121923;
+      --chip-text:#e5e7eb;
+      --border:#1f2937;
+    }
+    .blue{
+      --bg:#e6f0ff;
+      --card:#ffffff;
+      --text:#0a2540;
+      --muted:#475569;
+      --primary:#0077ff;
+      --accent:#0f172a;
+      --chip:#f1f5f9;
+      --chip-text:#0f172a;
+      --border:#cbd5e1;
+    }
+    .green{
+      --bg:#f0fff4;
+      --card:#ffffff;
+      --text:#064e3b;
+      --muted:#047857;
+      --primary:#10b981;
+      --accent:#064e3b;
+      --chip:#ecfdf5;
+      --chip-text:#064e3b;
+      --border:#d1fae5;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;}
+    a{color:inherit;text-decoration:none}
+
+    .container{max-width:960px;margin:40px auto;padding:0 20px;}
+    .resume{display:grid;grid-template-columns:320px 1fr;gap:24px;}
+    @media (max-width:860px){.resume{grid-template-columns:1fr;}}
+
+    .left{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+    .brand{background:linear-gradient(135deg,var(--primary),#fb7a85 65%,#ffd3d6 120%);color:#fff;padding:28px 24px;}
+    .brand .name{font-size:28px;font-weight:800;}
+    .brand .role{margin-top:6px;font-size:14px;font-weight:600;opacity:0.95;}
+    .avatar{display:flex;align-items:center;gap:14px;margin-top:18px;}
+    .avatar .circle{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;}
+    .location{font-size:13px;opacity:0.95;}
+
+    .section{padding:18px 20px;border-top:1px dashed var(--border);}
+    .section:first-of-type{border-top:none}
+    .sec-title{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);margin-bottom:10px;font-weight:700;}
+    .info-row{display:flex;align-items:center;gap:10px;padding:8px 10px;background:var(--chip);color:var(--chip-text);border-radius:10px;margin:6px 0;}
+    .info-row .icon{font-size:16px;width:18px;text-align:center}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;}
+    .chip{padding:8px 10px;background:var(--chip);color:var(--chip-text);border-radius:10px;font-size:13px;font-weight:600;border:1px solid var(--border);}
+
+    .right{display:flex;flex-direction:column;gap:16px;}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;}
+    .card h3{margin:0 0 12px 0;font-size:18px;}
+    .lead{font-size:15px;line-height:1.7;color:var(--text);}
+    .list{display:flex;flex-direction:column;gap:12px;}
+    .item{padding:12px;border:1px dashed var(--border);border-radius:12px;}
+    .item .title{font-weight:700}
+    .item .sub{font-size:13px;color:var(--muted);margin-top:2px}
+
+    .toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+    .btns{display:flex;gap:10px}
+    .btn{padding:8px 12px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);font-weight:600;font-size:13px;cursor:pointer;}
+    .btn.primary{background:var(--primary);border-color:var(--primary);color:#fff;}
+    .btn:hover{opacity:0.95}
+
+    @media print{
+      .toolbar{display:none}
+      .container{margin:0;max-width:100%;padding:0}
+      body{background:#fff}
+      .resume{grid-template-columns:320px 1fr}
+      .brand{background:#e23744}
+      .card,.resume,.left,.right{page-break-inside:avoid;page-break-after:avoid;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="toolbar">
+      <div style="font-weight:800;">Resume • Shivam</div>
+      <div class="btns">
+        <button class="btn" id="themeToggle">Toggle theme</button>
+        <button class="btn primary" id="printBtn">Download PDF</button>
+      </div>
+    </div>
+
+    <div class="resume">
+      <aside class="left">
+        <div class="brand">
+          <div class="name">Shivam</div>
+          <div class="role">Web Design & Development</div>
+          <div class="avatar">
+            <div class="circle">S</div>
+            <div>
+              <div class="location">Jaitpur, Badarpur Border</div>
+              <div class="location">Delhi, India</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="sec-title">Contact</div>
+          <div class="info-row">
+            <span class="icon">✉️</span>
+            <a href="mailto:shivamkumarsingh05122003@gmail.com">shivamkumarsingh05122003@gmail.com</a>
+          </div>
+          <div class="info-row">
+            <span class="icon">📍</span>
+            <span>Jaitpur, Badarpur Border, Delhi</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="sec-title">Education</div>
+          <div class="item">
+            <div class="title">12th pass</div>
+            <div class="sub">Senior secondary</div>
+          </div>
+          <div class="item" style="margin-top:10px">
+            <div class="title">Diploma in Web Design & Development</div>
+            <div class="sub">HTML, CSS, JavaScript, UI/UX basics</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="sec-title">Core skills</div>
+          <div class="skills">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Responsive UI</span>
+            <span class="chip">GitHub Pages</span>
+            <span class="chip">UI/UX</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="right">
+        <section class="card">
+          <h3>Profile</h3>
+          <p class="lead">
+            Frontend-focused web designer and developer with strong execution and polish. Built and deployed a Zomato‑style
+            food discovery web app (listing, detail pages, and responsive design) hosted on GitHub Pages for instant access.
+            Seeking an opportunity to contribute to high‑quality user interfaces and rapid prototyping.
+          </p
+                  </section>
+
+        <section class="card">
+          <h3>Highlights</h3>
+          <div class="list">
+            <div class="item">
+              <div class="title">Zomato‑style SPA</div>
+              <div class="sub">Restaurant listings, detail pages (menu + reviews), category coverage, and back navigation</div>
+            </div>
+            <div class="item">
+              <div class="title">Clean, responsive design</div>
+              <div class="sub">Grid layouts, modern components, and mobile‑first approach</div>
+            </div>
+            <div class="item">
+              <div class="title">Live hosting</div>
+              <div class="sub">Deployed on GitHub Pages for easy sharing and instant review</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Projects</h3>
+          <div class="list">
+            <div class="item">
+              <div class="title">FoodieHub — Zomato Inspired</div>
+              <div class="sub">Single‑page app with categories, search, detail view, and responsive grid</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Availability</h3>
+          <p class="lead">
+            Open to Web Design and Development roles. Immediate joining possible.
+          </p>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const themes = ["light", "dark", "blue", "green"];
+    let currentTheme = 0;
+
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      document.body.classList.remove(themes[currentTheme]);
+      currentTheme = (currentTheme + 1) % themes.length;
+      document.body.classList.add(themes[currentTheme]);
+    });
+
+    document.getElementById('printBtn').addEventListener('click', () => {
+      window.print();
+    });
+  </script>
+</body>
+</html>
