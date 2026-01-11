@@ -35,7 +35,7 @@
     .hero {
       text-align: center;
       padding: 3rem 1rem;
-      background: url('https://via.placeholder.com/1200x400?text=Food+Banner') center/cover no-repeat;
+      background: url('https://jw-webmagazine.com/wp-content/uploads/2019/06/jw-5d1498fca69235.59256113.jpeg') center/cover no-repeat;
       color: white;
     }
     .hero h2 {
@@ -77,6 +77,7 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       overflow: hidden;
       transition: transform 0.2s ease;
+      cursor: pointer;
     }
     .grid .card:hover {
       transform: translateY(-5px);
@@ -97,11 +98,49 @@
       margin: 0.2rem 0;
       color: #555;
     }
+    /* Detail Page */
+    #detail-page {
+      display: none;
+      padding: 2rem;
+    }
+    .banner {
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      border-radius: 8px;
+    }
+    .banner h2 {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+    }
+    .menu-item, .review {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
     footer {
       text-align: center;
       padding: 1rem;
       background: #e23744;
       color: white;
+    }
+    .back-btn {
+      background: #e23744;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
@@ -138,6 +177,16 @@
   <!-- Restaurant Listing -->
   <section id="restaurant-list" class="grid"></section>
 
+  <!-- Restaurant Detail Page -->
+  <section id="detail-page">
+    <button class="back-btn" onclick="goBack()">← Back</button>
+    <div id="detail-banner" class="banner"><h2 id="detail-name"></h2></div>
+    <h3>Menu</h3>
+    <div id="menu"></div>
+    <h3>Reviews</h3>
+    <div id="reviews"></div>
+  </section>
+
   <!-- Footer -->
   <footer>
     <p>© 2026 FoodieHub | Inspired by Zomato</p>
@@ -151,35 +200,39 @@
         cuisine: "Indian",
         rating: 4.5,
         price: "₹₹",
-        image: "https://jw-webmagazine.com/wp-content/uploads/2019/06/jw-5d1498fca69235.59256113.jpeg"
+        image: "https://jw-webmagazine.com/wp-content/uploads/2019/06/jw-5d1498fca69235.59256113.jpeg",
+        menu: [
+          { item: "Paneer Butter Masala", price: "₹250" },
+          { item: "Chicken Biryani", price: "₹300" },
+          { item: "Gulab Jamun (2 pcs)", price: "₹80" }
+        ],
+        reviews: [
+          "Rahul: ⭐⭐⭐⭐ — Great taste, authentic Indian flavors!",
+          "Priya: ⭐⭐⭐⭐⭐ — Loved the biryani, will order again.",
+          "Amit: ⭐⭐⭐ — Good food but delivery was a bit late."
+        ]
       },
       {
         name: "Pizza Mania",
         cuisine: "Italian",
         rating: 4.2,
         price: "₹₹₹",
-        image: "https://www.unclealspizza.com/wp-content/uploads/2024/08/Mushroom-Pizza-Preparation-Techniques.jpg"
-      },
-      {
-        name: "Sweet Tooth",
-        cuisine: "Desserts",
-        rating: 4.8,
-        price: "₹₹",
-        image: "https://img.restaurantguru.com/r5ca-dessert-Sweet-Tooth-Cafe-2021-09-3.jpg"
-      },
-      {
-        name: "Burger Hub",
-        cuisine: "Fast Food",
-        rating: 4.0,
-        price: "₹",
-        image: "https://img.restaurantguru.com/r69f-burger-Burger-Hub-2022-10-21.jpg"
+        image: "https://www.unclealspizza.com/wp-content/uploads/2024/08/Mushroom-Pizza-Preparation-Techniques.jpg",
+        menu: [
+          { item: "Margherita Pizza", price: "₹200" },
+          { item: "Pepperoni Pizza", price: "₹350" }
+        ],
+        reviews: [
+          "Sneha: ⭐⭐⭐⭐ — Crispy crust and cheesy toppings!",
+          "Ravi: ⭐⭐⭐⭐⭐ — Best pizza in town."
+        ]
       }
     ];
 
     function renderRestaurants(list) {
       const container = document.getElementById("restaurant-list");
       container.innerHTML = "";
-      list.forEach(rest => {
+      list.forEach((rest, index) => {
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
@@ -190,26 +243,44 @@
             <p>⭐ ${rest.rating} | ${rest.price}</p>
           </div>
         `;
+        card.addEventListener("click", () => showDetail(rest));
         container.appendChild(card);
       });
     }
 
-    // Initial render
-    renderRestaurants(restaurants);
+    function showDetail(rest) {
+      document.getElementById("restaurant-list").style.display = "none";
+      document.querySelector(".hero").style.display = "none";
+      document.querySelector(".categories").style.display = "none";
+      document.getElementById("detail-page").style.display = "block";
 
-    // Search functionality
-    document.getElementById("search").addEventListener("input", function(e) {
-      const query = e.target.value.toLowerCase();
-      const filtered = restaurants.filter(r =>
-        r.name.toLowerCase().includes(query) ||
-        r.cuisine.toLowerCase().includes(query)
-      );
-      renderRestaurants(filtered);
-    });
-  </script>
-</body>
-</html>
+      document.getElementById("detail-banner").style.backgroundImage = `url(${rest.image})`;
+      document.getElementById("detail-name").textContent = rest.name;
 
+      const menuDiv = document.getElementById("menu");
+menuDiv.innerHTML = "";
+rest.menu.forEach(m => {
+  const itemDiv = document.createElement("div");
+  itemDiv.className = "menu-item";
+  itemDiv.innerHTML = `
+    <span>${m.item}</span>
+    <span>${m.price}</span>
+  `;
+  menuDiv.appendChild(itemDiv);
+});
 
-
-
+// Reviews render
+const reviewsDiv = document.getElementById("reviews");
+reviewsDiv.innerHTML = "";
+rest.reviews.forEach(r => {
+  const reviewDiv = document.createElement("div");
+  reviewDiv.className = "review";
+  reviewDiv.textContent = r;
+  reviewsDiv.appendChild(reviewDiv);
+}
+  function goBack() {
+  document.getElementById("detail-page").style.display = "none";
+  document.getElementById("restaurant-list").style.display = "grid";
+  document.querySelector(".hero").style.display = "block";
+  document.querySelector(".categories").style.display = "flex";
+}
