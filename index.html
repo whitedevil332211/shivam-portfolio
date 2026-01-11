@@ -193,97 +193,104 @@
   </footer>
 
   <!-- JavaScript -->
-  <script>
-    const restaurants = [
-      {
-        name: "Spicy Treats",
-        cuisine: "Indian",
-        rating: 4.5,
-        price: "₹₹",
-        image: "https://jw-webmagazine.com/wp-content/uploads/2019/06/jw-5d1498fca69235.59256113.jpeg",
-        menu: [
-          { item: "Paneer Butter Masala", price: "₹250" },
-          { item: "Chicken Biryani", price: "₹300" },
-          { item: "Gulab Jamun (2 pcs)", price: "₹80" }
-        ],
-        reviews: [
-          "Rahul: ⭐⭐⭐⭐ — Great taste, authentic Indian flavors!",
-          "Priya: ⭐⭐⭐⭐⭐ — Loved the biryani, will order again.",
-          "Amit: ⭐⭐⭐ — Good food but delivery was a bit late."
-        ]
-      },
-      {
-        name: "Pizza Mania",
-        cuisine: "Italian",
-        rating: 4.2,
-        price: "₹₹₹",
-        image: "https://www.unclealspizza.com/wp-content/uploads/2024/08/Mushroom-Pizza-Preparation-Techniques.jpg",
-        menu: [
-          { item: "Margherita Pizza", price: "₹200" },
-          { item: "Pepperoni Pizza", price: "₹350" }
-        ],
-        reviews: [
-          "Sneha: ⭐⭐⭐⭐ — Crispy crust and cheesy toppings!",
-          "Ravi: ⭐⭐⭐⭐⭐ — Best pizza in town."
-        ]
-      }
-    ];
-
-    function renderRestaurants(list) {
-      const container = document.getElementById("restaurant-list");
-      container.innerHTML = "";
-      list.forEach((rest, index) => {
-        const card = document.createElement("div");
-        card.className = "card";
-        card.innerHTML = `
-          <img src="${rest.image}" alt="${rest.name}" class="card-img">
-          <div class="card-content">
-            <h3>${rest.name}</h3>
-            <p>${rest.cuisine}</p>
-            <p>⭐ ${rest.rating} | ${rest.price}</p>
-          </div>
-        `;
-        card.addEventListener("click", () => showDetail(rest));
-        container.appendChild(card);
-      });
+<script>
+  const restaurants = [
+    {
+      name: "Spicy Treats",
+      cuisine: "Indian",
+      rating: 4.5,
+      price: "₹₹",
+      image: "https://jw-webmagazine.com/wp-content/uploads/2019/06/jw-5d1498fca69235.59256113.jpeg",
+      menu: [
+        { item: "Paneer Butter Masala", price: "₹250" },
+        { item: "Chicken Biryani", price: "₹300" },
+        { item: "Gulab Jamun (2 pcs)", price: "₹80" }
+      ],
+      reviews: [
+        "Rahul: ⭐⭐⭐⭐ — Great taste, authentic Indian flavors!",
+        "Priya: ⭐⭐⭐⭐⭐ — Loved the biryani, will order again.",
+        "Amit: ⭐⭐⭐ — Good food but delivery was a bit late."
+      ]
+    },
+    {
+      name: "Pizza Mania",
+      cuisine: "Italian",
+      rating: 4.2,
+      price: "₹₹₹",
+      image: "https://www.unclealspizza.com/wp-content/uploads/2024/08/Mushroom-Pizza-Preparation-Techniques.jpg",
+      menu: [
+        { item: "Margherita Pizza", price: "₹200" },
+        { item: "Pepperoni Pizza", price: "₹350" }
+      ],
+      reviews: [
+        "Sneha: ⭐⭐⭐⭐ — Crispy crust and cheesy toppings!",
+        "Ravi: ⭐⭐⭐⭐⭐ — Best pizza in town."
+      ]
     }
+  ];
 
-    function showDetail(rest) {
-      document.getElementById("restaurant-list").style.display = "none";
-      document.querySelector(".hero").style.display = "none";
-      document.querySelector(".categories").style.display = "none";
-      document.getElementById("detail-page").style.display = "block";
+  function renderRestaurants(list) {
+    const container = document.getElementById("restaurant-list");
+    container.innerHTML = "";
+    list.forEach(rest => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${rest.image}" alt="${rest.name}" class="card-img">
+        <div class="card-content">
+          <h3>${rest.name}</h3>
+          <p>${rest.cuisine}</p>
+          <p>⭐ ${rest.rating} | ${rest.price}</p>
+        </div>
+      `;
+      card.addEventListener("click", () => showDetail(rest));
+      container.appendChild(card);
+    });
+  }
 
-      document.getElementById("detail-banner").style.backgroundImage = `url(${rest.image})`;
-      document.getElementById("detail-name").textContent = rest.name;
+  function showDetail(rest) {
+    document.getElementById("restaurant-list").style.display = "none";
+    document.querySelector(".hero").style.display = "none";
+    document.querySelector(".categories").style.display = "none";
+    document.getElementById("detail-page").style.display = "block";
 
-      const menuDiv = document.getElementById("menu");
-menuDiv.innerHTML = "";
-rest.menu.forEach(m => {
-  const itemDiv = document.createElement("div");
-  itemDiv.className = "menu-item";
-  itemDiv.innerHTML = `
-    <span>${m.item}</span>
-    <span>${m.price}</span>
-  `;
-  menuDiv.appendChild(itemDiv);
-});
+    document.getElementById("detail-banner").style.backgroundImage = `url(${rest.image})`;
+    document.getElementById("detail-name").textContent = rest.name;
 
-// Reviews render
-const reviewsDiv = document.getElementById("reviews");
-reviewsDiv.innerHTML = "";
-rest.reviews.forEach(r => {
-  const reviewDiv = document.createElement("div");
-  reviewDiv.className = "review";
-  reviewDiv.textContent = r;
-  reviewsDiv.appendChild(reviewDiv);
-}
+    // Menu render
+    const menuDiv = document.getElementById("menu");
+    menuDiv.innerHTML = "";
+    rest.menu.forEach(m => {
+      const itemDiv = document.createElement("div");
+      itemDiv.className = "menu-item";
+      itemDiv.innerHTML = `
+        <span>${m.item}</span>
+        <span>${m.price}</span>
+      `;
+      menuDiv.appendChild(itemDiv);
+    });
+
+    // Reviews render
+    const reviewsDiv = document.getElementById("reviews");
+    reviewsDiv.innerHTML = "";
+    rest.reviews.forEach(r => {
+      const reviewDiv = document.createElement("div");
+      reviewDiv.className = "review";
+      reviewDiv.textContent = r;
+      reviewsDiv.appendChild(reviewDiv);
+    });
+  }
+
   function goBack() {
-  document.getElementById("detail-page").style.display = "none";
-  document.getElementById("restaurant-list").style.display = "grid";
-  document.querySelector(".hero").style.display = "block";
-  document.querySelector(".categories").style.display = "flex";
-}
-      </script>
+    document.getElementById("detail-page").style.display = "none";
+    document.getElementById("restaurant-list").style.display = "grid";
+    document.querySelector(".hero").style.display = "block";
+    document.querySelector(".categories").style.display = "flex";
+  }
+
+  // Initial render
+  renderRestaurants(restaurants);
+</script>  
 </body>
 </html>
+
