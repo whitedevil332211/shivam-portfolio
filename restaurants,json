@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Spicy Treats",
+    "cuisine": "Indian",
+    "rating": 4.5,
+    "price": "₹₹",
+    "image": "assets/images/spicy.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Pizza Mania",
+    "cuisine": "Italian",
+    "rating": 4.2,
+    "price": "₹₹₹",
+    "image": "assets/images/pizza.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Sweet Tooth",
+    "cuisine": "Desserts",
+    "rating": 4.8,
+    "price": "₹₹",
+    "image": "assets/images/dessert.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Burger Hub",
+    "cuisine": "Fast Food",
+    "rating": 4.0,
+    "price": "₹",
+    "image": "assets/images/burger.jpg"
+  }
+]
