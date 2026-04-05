@@ -1,352 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>FoodieHub - Zomato Inspired</title>
-  <style>
-    body {
-      font-family: 'Roboto', Arial, sans-serif;
-      margin: 0;
-      background: #fafafa;
-    }
-    /* Navbar */
-    nav {
-      background: #e23744;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav .left {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    nav select, nav input {
-      padding: 0.5rem;
-      border: none;
-      border-radius: 4px;
-    }
-    nav input {
-      width: 250px;
-    }
-    /* Hero */
-    .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-      background: url('https://jw-webmagazine.com/wp-content/uploads/2019/06/jw-5d1498fca69235.59256113.jpeg') center/cover no-repeat;
-      color: white;
-    }
-    .hero h2 {
-      background: rgba(0,0,0,0.5);
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-    }
-    /* Categories */
-    .categories {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 2rem;
-      flex-wrap: wrap;
-    }
-    .categories .card {
-      background: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .categories .card:hover {
-      transform: scale(1.05);
-      background: #ffe5e5;
-    }
-    /* Restaurant Grid */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-    .grid .card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.2s ease;
-      cursor: pointer;
-    }
-    .grid .card:hover {
-      transform: translateY(-5px);
-    }
-    .card-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 1rem;
-    }
-    .card-content h3 {
-      margin: 0.5rem 0;
-      color: #e23744;
-    }
-    .card-content p {
-      margin: 0.2rem 0;
-      color: #555;
-    }
-    /* Detail Page */
-    #detail-page {
-      display: none;
-      padding: 2rem;
-    }
-    .banner {
-      width: 100%;
-      height: 300px;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      border-radius: 8px;
-    }
-    .banner h2 {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      background: rgba(0,0,0,0.6);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-    }
-    .menu-item, .review {
-      background: white;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #e23744;
-      color: white;
-    }
-    .back-btn {
-      background: #e23744;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-bottom: 1rem;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Sharda Library</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
   <!-- Navbar -->
-  <header>
-    <nav>
-      <div class="left">
-        <h1>FoodieHub</h1>
-        <select id="location">
-          <option>Delhi</option>
-          <option>Noida</option>
-          <option>Gurgaon</option>
-        </select>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <!-- Logo / Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="WhatsApp Image 2026-04-05 at 16.39.41.jpeg" alt="Sharda Library Logo" style="height:40px; margin-right:10px;">
+      <span class="fw-bold text-primary">Sharda Library</span>
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#mission">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#features">Programs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#getinvolved">Get Involved</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero Carousel -->
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image:url('Screenshot 2026-04-05 144340.png'); background-size:cover; height:70vh;">
+        <div class="d-flex h-100 align-items-center justify-content-center">
+          <div class="card bg-dark bg-opacity-75 text-white p-4">
+            <h1>Welcome to Our Website</h1>
+            <p>The best library in Jaitpur.</p>
+            <button class="btn btn-light">Learn More</button>
+          </div>
+        </div>
       </div>
-      <input type="text" id="search" placeholder="Search for restaurants or cuisines...">
-    </nav>
-  </header>
+      <div class="carousel-item" style="background-image:url('Screenshot 2026-04-05 144157.png'); background-size:cover; height:70vh;">
+        <div class="d-flex h-100 align-items-center justify-content-center">
+          <div class="card bg-dark bg-opacity-75 text-white p-4">
+            <h1>Seat Booking</h1>
+            <p>Book your seat according to your availability.</p>
+            <button class="btn btn-light">Explore Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image:url('Screenshot 2026-04-05 144539.png'); background-size:cover; height:70vh;">
+        <div class="d-flex h-100 align-items-center justify-content-center">
+          <div class="card bg-dark bg-opacity-75 text-white p-4">
+            <h1>Join Our Community</h1>
+            <p>Connect with learners and grow together.</p>
+            <button class="btn btn-light">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Discover the best food & drinks near you</h2>
+  <!-- Features -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Our Features</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Feature 1 (WiFi)</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Feature 2 (Silence)</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Feature 3 (Best place for study)</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Categories -->
-  <section class="categories">
-    <div class="card">🍕 Pizza</div>
-    <div class="card">🍔 Burgers</div>
-    <div class="card">🍲 Indian</div>
-    <div class="card">🍰 Desserts</div>
-    <div class="card">🥗 Healthy</div>
+  <!-- Gallery -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">Our Gallery</h2>
+      <div class="row g-3">
+        <div class="col-md-3"><img src="Screenshot 2026-04-05 144157.png" class="img-fluid rounded shadow"></div>
+        <div class="col-md-3"><img src="Screenshot 2026-04-05 144340.png" class="img-fluid rounded shadow"></div>
+        <div class="col-md-3"><img src="Screenshot 2026-04-05 144442.png" class="img-fluid rounded shadow"></div>
+        <div class="col-md-3"><img src="Screenshot 2026-04-05 144539.png" class="img-fluid rounded shadow"></div>
+        <div class="col-md-3"><img src="Screenshot 2026-04-05 152426 g.png" alt="" class="img-fluid rounded shadow"></div>
+        <div class="col-md-3"><img src="Screenshot 2026-04-05 152525 g.png" alt="" class="img-fluid rounded shadow"></div>
+        <div class="col-md-3"><img src="Screenshot 2026-04-05 152600 g.png" alt="" class="img-fluid rounded shadow"></div>
+        <div class="col-md-3"><img src="Screenshot 2026-04-05 152631 g.png" alt="" class="img-fluid rounded shadow"></div>
+        <!-- Add more images as needed -->
+      </div>
+    </div>
   </section>
 
-  <!-- Restaurant Listing -->
-  <section id="restaurant-list" class="grid"></section>
+  <!-- Contact -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Get in touch</h2>
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" class="form-control">
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-control">
+        </div>
+        <div class="col-md-6">
+          <label for="mobile_number" class="form-label">Phone Number</label>
+          <input type="text" id="mobile_number" class="form-control">
+        </div>
+        <div class="col-12">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
 
-  <!-- Restaurant Detail Page -->
-  <section id="detail-page">
-    <button class="back-btn" onclick="goBack()">← Back</button>
-    <div id="detail-banner" class="banner"><h2 id="detail-name"></h2></div>
-    <h3>Menu</h3>
-    <div id="menu"></div>
-    <h3>Reviews</h3>
-    <div id="reviews"></div>
+      <!-- WhatsApp Contact -->
+      <div class="text-center mt-4">
+        <a href="https://wa.me/917011707523" target="_blank" class="btn btn-success d-inline-flex align-items-center">
+          <img src="Screenshot 2026-04-05 160032 whatsapp.png" alt="WhatsApp Logo" style="width:25px; height:25px; margin-right:10px;">
+          Chat with us on WhatsApp
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>© 2026 FoodieHub | Inspired by Zomato</p>
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2026 Our Website</p>
   </footer>
 
-  <!-- JavaScript -->
-<script>
-  const restaurants = [
-    {
-      name: "Spicy Treats",
-      cuisine: "Indian",
-      rating: 4.5,
-      price: "₹₹",
-      image: "https://jw-webmagazine.com/wp-content/uploads/2019/06/jw-5d1498fca69235.59256113.jpeg",
-      menu: [
-        { item: "Paneer Butter Masala", price: "₹250" },
-        { item: "Chicken Biryani", price: "₹300" },
-        { item: "Gulab Jamun (2 pcs)", price: "₹80" }
-      ],
-      reviews: [
-        "Rahul: ⭐⭐⭐⭐ — Great taste, authentic Indian flavors!",
-        "Priya: ⭐⭐⭐⭐⭐ — Loved the biryani, will order again.",
-        "Amit: ⭐⭐⭐ — Good food but delivery was a bit late."
-      ]
-    },
-    {
-      name: "Pizza Mania",
-      cuisine: "Italian",
-      rating: 4.2,
-      price: "₹₹₹",
-      image: "https://www.unclealspizza.com/wp-content/uploads/2024/08/Mushroom-Pizza-Preparation-Techniques.jpg",
-      menu: [
-        { item: "Margherita Pizza", price: "₹200" },
-        { item: "Pepperoni Pizza", price: "₹350" }
-      ],
-      reviews: [
-        "Sneha: ⭐⭐⭐⭐ — Crispy crust and cheesy toppings!",
-        "Ravi: ⭐⭐⭐⭐⭐ — Best pizza in town."
-      ]
-    },
-    {
-  name: "Sweet Tooth",
-  cuisine: "Desserts",
-  rating: 4.8,
-  price: "₹₹",
-  image: "https://img.restaurantguru.com/r5ca-dessert-Sweet-Tooth-Cafe-2021-09-3.jpg",
-  menu: [
-    { item: "Chocolate Lava Cake", price: "₹180" },
-    { item: "Cheesecake Slice", price: "₹220" },
-    { item: "Ice Cream Sundae", price: "₹150" }
-  ],
-  reviews: [
-    "Neha: ⭐⭐⭐⭐⭐ — Best desserts in town, especially the lava cake!",
-    "Arjun: ⭐⭐⭐⭐ — Loved the cheesecake, very creamy.",
-    "Meera: ⭐⭐⭐⭐ — Great variety of sweets, perfect after dinner."
-  ]
-},
-    {
-  name: "Burger Hub",
-  cuisine: "Fast Food",
-  rating: 4.0,
-  price: "₹",
-  image: "https://img.restaurantguru.com/r69f-burger-Burger-Hub-2022-10-21.jpg",
-  menu: [
-    { item: "Classic Veg Burger", price: "₹120" },
-    { item: "Cheese Chicken Burger", price: "₹180" },
-    { item: "French Fries", price: "₹100" }
-  ],
-  reviews: [
-    "Karan: ⭐⭐⭐⭐ — Loved the chicken burger, juicy and tasty!",
-    "Simran: ⭐⭐⭐ — Fries were good but portion size small.",
-    "Rohit: ⭐⭐⭐⭐ — Affordable and quick service, perfect for fast food cravings."
-  ]
-},
-    {
-  name: "Green Bowl",
-  cuisine: "Healthy",
-  rating: 4.6,
-  price: "₹₹",
-  image: "http://greenbowl.com.do/wp-content/uploads/2017/07/greenbowl-124-chicken-honey-mustard-copy.jpg",
-  menu: [
-    { item: "Quinoa Salad Bowl", price: "₹250" },
-    { item: "Grilled Veggies with Hummus", price: "₹300" },
-    { item: "Fresh Fruit Smoothie", price: "₹180" }
-  ],
-  reviews: [
-    "Ananya: ⭐⭐⭐⭐⭐ — Loved the quinoa salad, super fresh and filling!",
-    "Vikram: ⭐⭐⭐⭐ — Healthy options with great taste, smoothie was amazing.",
-    "Riya: ⭐⭐⭐⭐ — Perfect place for guilt-free meals."
-  ]
-}
-  ];
-
-  function renderRestaurants(list) {
-    const container = document.getElementById("restaurant-list");
-    container.innerHTML = "";
-    list.forEach(rest => {
-      const card = document.createElement("div");
-      card.className = "card";
-      card.innerHTML = `
-        <img src="${rest.image}" alt="${rest.name}" class="card-img">
-        <div class="card-content">
-          <h3>${rest.name}</h3>
-          <p>${rest.cuisine}</p>
-          <p>⭐ ${rest.rating} | ${rest.price}</p>
-        </div>
-      `;
-      card.addEventListener("click", () => showDetail(rest));
-      container.appendChild(card);
-    });
-  }
-
-  function showDetail(rest) {
-    document.getElementById("restaurant-list").style.display = "none";
-    document.querySelector(".hero").style.display = "none";
-    document.querySelector(".categories").style.display = "none";
-    document.getElementById("detail-page").style.display = "block";
-
-    document.getElementById("detail-banner").style.backgroundImage = `url(${rest.image})`;
-    document.getElementById("detail-name").textContent = rest.name;
-
-    // Menu render
-    const menuDiv = document.getElementById("menu");
-    menuDiv.innerHTML = "";
-    rest.menu.forEach(m => {
-      const itemDiv = document.createElement("div");
-      itemDiv.className = "menu-item";
-      itemDiv.innerHTML = `
-        <span>${m.item}</span>
-        <span>${m.price}</span>
-      `;
-      menuDiv.appendChild(itemDiv);
-    });
-
-    // Reviews render
-    const reviewsDiv = document.getElementById("reviews");
-    reviewsDiv.innerHTML = "";
-    rest.reviews.forEach(r => {
-      const reviewDiv = document.createElement("div");
-      reviewDiv.className = "review";
-      reviewDiv.textContent = r;
-      reviewsDiv.appendChild(reviewDiv);
-    });
-  }
-
-  function goBack() {
-    document.getElementById("detail-page").style.display = "none";
-    document.getElementById("restaurant-list").style.display = "grid";
-    document.querySelector(".hero").style.display = "block";
-    document.querySelector(".categories").style.display = "flex";
-  }
-
-  // Initial render
-  renderRestaurants(restaurants);
-</script>  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
