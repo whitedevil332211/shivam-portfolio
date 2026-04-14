@@ -1,210 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Sharda Library</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharda Library Header</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .info-block {
+      border: 2px solid #af9a7d;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+    .info-block img {
+      height: 30px;
+      margin-right: 10px;
+    }
+    .info-block h6 {
+      margin: 0;
+      color: #af9a7d;
+      font-weight: bold;
+    }
+    .info-block p {
+      margin: 0;
+      color: #fff;
+    }
+    .social-icons a {
+      color: #af9a7d;
+      background: #fff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+  </style>
+  
 </head>
-
 <body>
-  <!-- Navbar -->
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-  <div class="container">
-    <!-- Logo / Brand -->
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="WhatsApp Image 2026-04-05 at 16.39.41.jpeg" alt="Sharda Library Logo" style="height:40px; margin-right:10px;">
-      <span class="fw-bold text-primary">Sharda Library</span>
-    </a>
 
-    <!-- Toggler for mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<header class="bg-dark text-white py-3">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+
+    <!-- Left Section: Hamburger Menu -->
+    <nav class="navbar navbar-dark p-0">
+  <div class="container-fluid p-0">
+    <!-- Toggle Button -->
+    <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Nav links -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    <!-- Logo / Title with gap -->
+    <div class="text-white fw-bold me-4" style="font-family: 'Poppins', sans-serif;">
+      Sharda Library
+    </div>
+    
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse text-start" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="features.html">Features</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="get-involved.html">Get Involved</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Image + Text Section -->
-<section class="py-5">
+    <!-- Right Section: Info Blocks + Social Icons -->
+    <div class="d-flex align-items-center">
+      <!-- Location -->
+      <div class="info-block">
+        <img src="https://excelpubliclibrary.com/wp-content/themes/studies/images/head-pin.png" alt="Location Icon">
+        <div>
+          <h6>Location</h6>
+          <p>Jaitpur, Faridabad</p>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="info-block">
+        <img src="https://excelpubliclibrary.com/wp-content/themes/studies/images/head-mail.png" alt="Email Icon">
+        <div>
+          <h6>Email Us</h6>
+          <p>shardalibrary@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Call Us -->
+      <div class="info-block">
+        <img src="https://excelpubliclibrary.com/wp-content/themes/studies/images/head-phn.png" alt="Phone Icon">
+        <div>
+          <h6>Call Us</h6>
+          <p>+91-97110 01198</p>
+        </div>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="social-icons d-flex">
+        <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+        <a href="https://google.com" target="_blank"><i class="bi bi-google"></i></a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- Hero Section -->
+<!-- Hero Section -->
+<section class="hero d-flex align-items-center text-center text-white" 
+         style="min-height: 90vh; position: relative; background: url('WhatsApp Image 2026-04-13 at 17.49.39.jpeg') center/cover no-repeat;">
+  
+  <!-- Dark Overlay -->
+  <div style="position: absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.6);"></div>
+  
+  <!-- Hero Content -->
+  <div class="container" style="position: relative; z-index: 1;">
+    <!-- Title -->
+    <h1 class="display-2 fw-bold mb-3" style="font-family: 'Poppins', sans-serif;">
+      Welcome to Sharda Library
+    </h1>
+    <!-- Subtitle -->
+    <p class="lead mb-4" style="font-family: 'Poppins', sans-serif;">
+      A modern hub for learning, reading, and community growth.
+    </p>
+    <!-- Buttons -->
+    <a href="about.html" class="btn btn-primary btn-lg px-4 me-2" 
+       style="background-color:#af9a7d; border:none; font-family: 'Poppins', sans-serif;">
+       Learn More
+    </a>
+    <a href="contact.html" class="btn btn-outline-light btn-lg px-4" 
+       style="font-family: 'Poppins', sans-serif;">
+       Join Us
+    </a>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5" style="font-family: 'montserrat', sans-serif; color:#af9a7d;">
+      Our Gallery
+    </h2>
+    <div class="row g-4">
+      
+      <!-- Gallery Item -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+          <img src="WhatsApp Image 2026-04-13 at 17.49.38.jpeg" class="card-img-top gallery-img" alt="Library Interior">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+          <img src="WhatsApp Image 2026-04-13 at 17.49.45.jpeg" class="card-img-top gallery-img" alt="Study Area">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+          <img src="WhatsApp Image 2026-04-13 at 17.49.39.jpeg" class="card-img-top gallery-img" alt="Bookshelves">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+          <img src="WhatsApp Image 2026-04-13 at 17.49.40.jpeg" class="card-img-top gallery-img" alt="Reading Room">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+          <img src="WhatsApp Image 2026-04-13 at 17.49.41.jpeg" class="card-img-top gallery-img" alt="Newspapers Section">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+          <img src="WhatsApp Image 2026-04-13 at 17.49.43.jpeg" class="card-img-top gallery-img" alt="Computer Area">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CSS for uniform image size -->
+<style>
+  .gallery-img {
+    height: 250px;          /* Fixed height for all images */
+    object-fit: cover;      /* Crop/scale image to fit */
+    width: 100%;            /* Full width */
+    border-radius: 5px;     /* Rounded corners for clean look */
+  }
+</style>
+
+<!-- About Us Section -->
+<section class="py-5 bg-light">
   <div class="container">
     <div class="row align-items-center">
-      <!-- Image on the left -->
+      
+      <!-- Left Side: Image -->
       <div class="col-md-6 mb-4 mb-md-0">
-        <img src="WhatsApp Image 2026-04-05 at 16.39.45.jpeg" alt="Library Image" class="img-fluid rounded shadow">
+        <img src="WhatsApp Image 2026-04-13 at 17.49.48.jpeg" alt="About Sharda Library" 
+             class="img-fluid rounded shadow">
       </div>
-      <!-- Text on the right -->
+      
+      <!-- Right Side: Content -->
       <div class="col-md-6">
-        <h2 class="mb-3">About Sharda Library</h2>
-        <p class="lead">
-          Sharda Library is more than just a place to read. 
-          It’s a community hub where people share books, ideas, and friendships. Our mission is to make 
-          reading accessible and enjoyable for everyone.
+        <h3 class="mt-4 fw-bold" 
+            style="font-family: 'Poppins', sans-serif; color:#af9a7d; text-transform: uppercase;">
+          Consistency Creates Success
+        </h3>
+        
+        <h2 class="mb-4" style="font-family: 'Poppins', sans-serif; color:#af9a7d;">
+          About Us
+        </h2>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; color:#333;">
+          Sharda Library is a modern learning hub designed to provide students and professionals 
+          with a peaceful environment for study and research. With state-of-the-art facilities, 
+          free WiFi, AC rooms, and a wide collection of resources, we ensure that every visitor 
+          finds the perfect atmosphere to focus and grow.
         </p>
-        <a href="about.html" class="btn btn-primary">Read More</a>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; color:#333;">
+          Our mission is to build a community of learners by offering affordable membership, 
+          daily newspapers, secure lockers, and a safe environment with CCTV surveillance. 
+          Sharda Library is not just a place to read — it’s a place to belong.
+        </p>
+        
+        <!-- Call to Action Button -->
+        <a href="contact.html" class="btn btn-primary btn-lg px-4 mt-3" 
+           style="background-color:#af9a7d; border:none; font-family: 'Poppins', sans-serif;">
+          Contact Us
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-
-  <!-- Hero Carousel -->
-  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active" style="background-image:url('Screenshot 2026-04-05 144340.png'); background-size:cover; height:70vh;">
-        <div class="d-flex h-100 align-items-center justify-content-center">
-          <div class="card bg-dark bg-opacity-75 text-white p-4">
-            <h1>Welcome to Our Website</h1>
-            <p>The best library in Jaitpur.</p>
-            <button class="btn btn-light">Learn More</button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item" style="background-image:url('Screenshot 2026-04-05 144157.png'); background-size:cover; height:70vh;">
-        <div class="d-flex h-100 align-items-center justify-content-center">
-          <div class="card bg-dark bg-opacity-75 text-white p-4">
-            <h1>Seat Booking</h1>
-            <p>Book your seat according to your availability.</p>
-            <button class="btn btn-light">Explore Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item" style="background-image:url('Screenshot 2026-04-05 144539.png'); background-size:cover; height:70vh;">
-        <div class="d-flex h-100 align-items-center justify-content-center">
-          <div class="card bg-dark bg-opacity-75 text-white p-4">
-            <h1>Join Our Community</h1>
-            <p>Connect with learners and grow together.</p>
-            <button class="btn btn-light"><a class="nav-link"href="contact.html">Sign Up</a></button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
-
-    <!-- Features -->
-  <section class="py-5">
+<!-- Why Choose Us Section -->
+<section class="py-5 bg-white">
   <div class="container text-center">
-    <h2 class="mb-4">Our Features</h2>
-    <div class="row">
+    <h2 class="mb-5" style="font-family: 'Poppins', sans-serif; color:#af9a7d;">
+      Why Choose Us
+    </h2>
+    <div class="row g-4">
+      
+      <!-- Point 1 -->
       <div class="col-md-4">
-        <img src="Screenshot 2026-04-05 200837 wifi.png" alt="WiFi Icon" style="height:60px; margin-bottom:15px;">
-        <h3>Feature 1 (WiFi)</h3>
-        <p>The **WiFi facility at Sharda Library** is one of its most valuable features. It provides members with fast, reliable, and secure internet access throughout the library space. Whether you’re working on research projects, attending online classes, or simply browsing for information, the high‑speed connection ensures that your work is uninterrupted.  
-
-This service is especially helpful for students and professionals who bring their laptops or mobile devices, as it allows them to combine traditional resources like books with modern digital tools. The WiFi is available across all study areas, so you can choose your favorite corner and stay connected while working in a peaceful environment.  
-
-In short, the WiFi facility makes Sharda Library a modern learning hub, blending the quiet focus of a traditional library with the convenience of digital access.</p>
-      </div>
-      <div class="col-md-4">
-        <img src="Screenshot 2026-04-05 202721 AC Room.png" alt="Silence Icon" style="height:60px; margin-bottom:15px;">
-        <h3>Feature 2 - AC Room</h3>
-        <p>The **AC room facility at Sharda Library** is designed to make studying and reading more comfortable, especially during the hot summer months. With well‑maintained air conditioning, members can focus on their work without worrying about the heat or humidity.  
-
-This facility ensures a calm and pleasant environment where students, professionals, and community members can spend long hours productively. The cool and quiet atmosphere not only helps with concentration but also makes group discussions and study sessions more enjoyable.  
-
-By providing an air‑conditioned space, Sharda Library shows its commitment to creating a modern, supportive learning hub that values both comfort and productivity. It’s the perfect blend of traditional library resources with the convenience of modern amenities.</p>
-      </div>
-      <div class="col-md-4">
-        <img src="Screenshot 2026-04-05 203014 study room.png" alt="Study Icon" style="height:60px; margin-bottom:15px;">
-        <h3>Feature 3 (Best place for study)</h3>
-        <p>The **“Best Place for Study” facility at Sharda Library** is all about creating the perfect environment for focus and productivity. The library offers comfortable seating, quiet surroundings, and well‑lit study areas that help learners stay engaged for long hours.  
-
-Students preparing for exams, professionals working on projects, or anyone who simply wants a peaceful corner to read will find the atmosphere supportive and motivating. The combination of silence, air‑conditioned rooms, and free WiFi makes it easy to concentrate without distractions.  
-
-By blending modern amenities with a calm, traditional library setting, Sharda Library truly becomes the best place for study — a space where knowledge, comfort, and community come together to help you achieve your goals.</p>
+        <div class="p-4 border rounded shadow-sm h-100">
+          <img src="Screenshot 2026-04-05 200837 wifi.png" alt="Free WiFi" class="mb-3" style="height:50px;">
+          <h5 style="font-family: 'Poppins', sans-serif; color:#af9a7d;">Free WiFi</h5>
+          <p style="font-family: 'Poppins', sans-serif; color:#333;">
+            Stay connected with high-speed internet access for all members.
+          </p>
+        </div>
       </div>
 
+      <!-- Point 2 -->
       <div class="col-md-4">
-        <img src="Screenshot 2026-04-05 210401 news-paper.png" alt="Study Icon" style="height:60px; margin-bottom:15px;">
-        <h3>Feature 4 - free news paper</h3>
-        <p>The **Free Newspaper facility at Sharda Library** is a thoughtful addition that keeps readers informed and connected with the world. Every day, members can access leading newspapers without any extra cost, making it easy to stay updated on current affairs, educational news, and community happenings.  
-
-This service is especially useful for students preparing for competitive exams, as newspapers provide valuable insights into general knowledge, current events, and language skills. For casual readers, it’s a great way to enjoy morning reading in a peaceful environment.  
-
-By offering free newspapers, Sharda Library ensures that knowledge isn’t limited to books alone — it extends to daily updates, opinions, and stories that shape our society. It’s another way the library supports learning, awareness, and community engagement.</p>
+        <div class="p-4 border rounded shadow-sm h-100">
+          <img src="Screenshot 2026-04-05 202721 AC Room.png" alt="AC Rooms" class="mb-3" style="height:50px;">
+          <h5 style="font-family: 'Poppins', sans-serif; color:#af9a7d;">AC Rooms</h5>
+          <p style="font-family: 'Poppins', sans-serif; color:#333;">
+            Comfortable air-conditioned study rooms for focused learning.
+          </p>
+        </div>
       </div>
 
+      <!-- Point 3 -->
       <div class="col-md-4">
-        <img src="Screenshot 2026-04-05 210902 lockers.png" alt="Study Icon" style="height:60px; margin-bottom:15px;">
-        <h3>Feature 5 - lockers availability</h3>
-        <p>The **locker facility at Sharda Library** is provided to ensure that members can study in comfort without worrying about their personal belongings. Secure lockers are available for students and visitors to safely store bags, books, laptops, or other items while they focus on reading and learning.  
-
-This service is especially useful for those who spend long hours in the library, as it allows them to keep their essentials safe and organized. Each locker is easy to use, spacious enough for study materials, and maintained regularly for cleanliness and security.  
-
-By offering lockers, Sharda Library creates a stress‑free environment where members can concentrate fully on their studies, knowing their belongings are protected. It’s another way the library combines convenience with care for its community.</p>
+        <div class="p-4 border rounded shadow-sm h-100">
+          <img src="Screenshot 2026-04-05 203014 study room.png" alt="Wide Collection" class="mb-3" style="height:50px;">
+          <h5 style="font-family: 'Poppins', sans-serif; color:#af9a7d;">Wide Collection</h5>
+          <p style="font-family: 'Poppins', sans-serif; color:#333;">
+            Access a diverse range of books, newspapers, and journals.
+          </p>
+        </div>
       </div>
 
+      <!-- Point 4 -->
       <div class="col-md-4">
-        <img src="Screenshot 2026-04-05 211229 cctv.png" alt="Study Icon" style="height:60px; margin-bottom:15px;">
-        <h3>Feature 6 - cctv availability for security</h3>
-        <p>The **CCTV facility at Sharda Library** is an important feature that ensures safety and security for all members. With surveillance cameras installed across key areas of the library, visitors can study and read with peace of mind knowing that their environment is being monitored.  
-
-This system helps protect personal belongings, maintain discipline, and create a safe atmosphere for students, professionals, and community members. The presence of CCTV also supports the library staff in managing the space efficiently and responding quickly if any issue arises.  
-
-By offering CCTV availability, Sharda Library shows its commitment to providing not only a comfortable study environment but also a secure one — so that every visitor can focus on learning without worry.</p>
+        <div class="p-4 border rounded shadow-sm h-100">
+          <img src="Screenshot 2026-04-05 210902 lockers.png" alt="Secure Lockers" class="mb-3" style="height:50px;">
+          <h5 style="font-family: 'Poppins', sans-serif; color:#af9a7d;">Secure Lockers</h5>
+          <p style="font-family: 'Poppins', sans-serif; color:#333;">
+            Personal lockers available to keep your belongings safe.
+          </p>
+        </div>
       </div>
 
+      <!-- Point 5 -->
       <div class="col-md-4">
-        <img src="Screenshot 2026-04-05 211905 affordable fees.png" alt="Study Icon" style="height:60px; margin-bottom:15px;">
-        <h3>Feature 7 - affordable fees</h3>
-        <p>The **affordable fees at Sharda Library** make it accessible to everyone in the community. By keeping membership costs low, the library ensures that students, professionals, and avid readers can enjoy all its facilities — from WiFi and AC rooms to newspapers and secure lockers — without financial burden.  
-
-This approach reflects the library’s mission to promote learning and inclusivity. Affordable fees mean that education and resources are not limited to a few, but open to all who wish to grow, study, and connect. It’s a way of saying that knowledge should never be out of reach because of cost.  
-
-In short, Sharda Library combines modern amenities with community care, offering a high‑quality study environment at a price that everyone can manage.</p>
+        <div class="p-4 border rounded shadow-sm h-100">
+          <img src="Screenshot 2026-04-05 211229 cctv.png" alt="CCTV Surveillance" class="mb-3" style="height:50px;">
+          <h5 style="font-family: 'Poppins', sans-serif; color:#af9a7d;">CCTV Surveillance</h5>
+          <p style="font-family: 'Poppins', sans-serif; color:#333;">
+            A safe and secure environment monitored 24/7.
+          </p>
+        </div>
       </div>
 
+      <!-- Point 6 -->
       <div class="col-md-4">
-        <img src="Screenshot 2026-04-05 212214 power backup.png" alt="Study Icon" style="height:60px; margin-bottom:15px;">
-        <h3>Feature 8 - power backup</h3>
-        <p>The **power backup facility at Sharda Library** ensures that learning never stops, even during unexpected electricity cuts. With reliable backup systems in place, the library maintains uninterrupted lighting, air conditioning, and WiFi so that members can continue studying without disruption.  
-
-This feature is especially important for students preparing for exams or professionals working on deadlines, as it guarantees a consistent and comfortable environment. The presence of power backup reflects the library’s commitment to providing a dependable study space where focus and productivity are never compromised.  
-
-In short, Sharda Library’s power backup facility makes it a truly resilient and modern hub for learning, giving visitors peace of mind that their study time will always be protected.</p>
+        <div class="p-4 border rounded shadow-sm h-100">
+          <img src="Screenshot 2026-04-05 211905 affordable fees.png" alt="Affordable Membership" class="mb-3" style="height:50px;">
+          <h5 style="font-family: 'Poppins', sans-serif; color:#af9a7d;">Affordable fees</h5>
+          <p style="font-family: 'Poppins', sans-serif; color:#333;">
+            Flexible plans designed to suit every learner’s needs.
+          </p>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
-  <!-- Gallery -->
-  <section class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="mb-4">Our Gallery</h2>
-      <div class="row g-3">
-        <div class="col-md-3"><img src="Screenshot 2026-04-05 144157.png" class="img-fluid rounded shadow"></div>
-        <div class="col-md-3"><img src="Screenshot 2026-04-05 144340.png" class="img-fluid rounded shadow"></div>
-        <div class="col-md-3"><img src="Screenshot 2026-04-05 144442.png" class="img-fluid rounded shadow"></div>
-        <div class="col-md-3"><img src="Screenshot 2026-04-05 144539.png" class="img-fluid rounded shadow"></div>
-        <div class="col-md-3"><img src="Screenshot 2026-04-05 152426 g.png" alt="" class="img-fluid rounded shadow"></div>
-        <div class="col-md-3"><img src="Screenshot 2026-04-05 152525 g.png" alt="" class="img-fluid rounded shadow"></div>
-        <div class="col-md-3"><img src="Screenshot 2026-04-05 152600 g.png" alt="" class="img-fluid rounded shadow"></div>
-        <div class="col-md-3"><img src="Screenshot 2026-04-05 152631 g.png" alt="" class="img-fluid rounded shadow"></div>
-        <!-- Add more images as needed -->
+
+<!-- Studies Feedback Section -->
+<section class="py-5 text-white" 
+         style="background: url('https://excelpubliclibrary.com/wp-content/themes/studies/images/testimonial-bg.jpg') center/cover no-repeat;">
+  <div class="container text-center">
+    <!-- Heading -->
+    <h2 class="mb-3" style="font-family: 'Poppins', sans-serif; color:#af9a7d;">
+      Studies Feedback
+    </h2>
+    <h4 class="mb-5" style="font-family: 'Poppins', sans-serif; color:#fff;">
+      What Our Customers Say About Us
+    </h4>
+
+    <div class="row g-4">
+      <!-- Feedback 1 -->
+      <div class="col-md-4">
+        <div class="p-4 rounded shadow-sm h-100 bg-dark bg-opacity-75">
+          <img src="https://excelpubliclibrary.com/wp-content/uploads/2025/10/blank-profile-picture-973460_1280.webp" alt="Customer Icon" class="mb-3" style="height:60px;">
+          <p style="font-family: 'Poppins', sans-serif;">
+            “Sharda Library provides the perfect environment for focused study. 
+            The facilities are excellent and I feel motivated every day.”
+          </p>
+          <!-- Star Rating -->
+          <div class="text-warning mb-2">★★★★★</div>
+          <h6 style="font-family: 'Poppins', sans-serif; color:#af9a7d;">– Rahul Sharma</h6>
+        </div>
+      </div>
+
+      <!-- Feedback 2 -->
+      <div class="col-md-4">
+        <div class="p-4 rounded shadow-sm h-100 bg-dark bg-opacity-75">
+          <img src="woman-head-icon-silhouette-female-avatar-profile-face-silhouette-sign_514344-14754 (1).avif" alt="Customer Icon" class="mb-3" style="height:60px;">
+          <p style="font-family: 'Poppins', sans-serif;">
+            “Consistency creates success — and Sharda Library helps me stay consistent. 
+            The peaceful atmosphere makes studying enjoyable.”
+          </p>
+          <div class="text-warning mb-2">★★★★☆</div>
+          <h6 style="font-family: 'Poppins', sans-serif; color:#af9a7d;">– Priya Verma</h6>
+        </div>
+      </div>
+
+      <!-- Feedback 3 -->
+      <div class="col-md-4">
+        <div class="p-4 rounded shadow-sm h-100 bg-dark bg-opacity-75">
+          <img src="https://excelpubliclibrary.com/wp-content/uploads/2025/10/blank-profile-picture-973460_1280.webp" alt="Customer Icon" class="mb-3" style="height:60px;">
+          <p style="font-family: 'Poppins', sans-serif;">
+            “Affordable membership and great facilities. I love the AC rooms 
+            and the wide collection of books available here.”
+          </p>
+          <div class="text-warning mb-2">★★★★★</div>
+          <h6 style="font-family: 'Poppins', sans-serif; color:#af9a7d;">– Aman Gupta</h6>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section class="py-5">
-    <div class="container">
+<!-- WhatsApp Floating Icon -->
+<a href="https://wa.me/919711001198" target="_blank" class="whatsapp-float">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- CSS -->
+<style>
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* WhatsApp green */
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px #999;
+    z-index: 1000; /* stays above other elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  .whatsapp-float:hover {
+    background-color: #20b954;
+    color: #fff;
+  }
+</style>
+
+<div class="container">
       <h2 class="text-center mb-4">Get in touch</h2>
       <form class="row g-3">
         <div class="col-md-6">
@@ -229,45 +436,79 @@ In short, Sharda Library’s power backup facility makes it a truly resilient an
       </form>
 
       <!-- WhatsApp Contact -->
-      <div class="text-center mt-4">
-        <a href="https://wa.me/917011707523" target="_blank" class="btn btn-success d-inline-flex align-items-center">
-          <img src="Screenshot 2026-04-05 160032 whatsapp.png" alt="WhatsApp Logo" style="width:25px; height:25px; margin-right:10px;">
-          Chat with us on WhatsApp
-        </a>
-      </div>
     </div>
-  </section>
 
-    <!-- Footer -->
-  <footer class="bg-dark text-white py-4">
+    <!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-3 mt-5 mb-3">
   <div class="container">
     <div class="row">
-      <!-- Column 1: Library Info -->
-      <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-        <h5>Sharda Library</h5>
-        <p>&copy; 2026 Sharda Library</p>
+      
+      <!-- About / Logo -->
+      <div class="col-md-4 mb-4">
+        <h4 style="font-family: 'Poppins', sans-serif; color:#af9a7d;">Sharda Library</h4>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 0.95rem;">
+          A modern hub for learning, reading, and community growth. 
+          Providing peaceful study spaces, wide resources, and a supportive environment.
+        </p>
+        <!-- Social Icons -->
+        <div class="d-flex mt-3">
+          <a href="https://facebook.com" target="_blank" class="me-2 text-white">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="me-2 text-white">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="me-2 text-white">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="me-2 text-white">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a href="https://google.com" target="_blank" class="text-white">
+            <i class="bi bi-google"></i>
+          </a>
+        </div>
       </div>
 
-      <!-- Column 2: Address -->
-      <div class="col-md-4 text-center mb-3 mb-md-0">
-        <h5>Address</h5>
-        <p>
-          F-132 First Floor<br>
-          Ismailpur Road, Hari Nagar Extn, Badarpur<br>
-          New Delhi, India
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 style="font-family: 'Poppins', sans-serif; color:#af9a7d;">Quick Links</h5>
+        <ul class="list-unstyled" style="font-family: 'Poppins', sans-serif;">
+          <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="features.html" class="text-white text-decoration-none">Features</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          <li><a href="get-involved.html" class="text-white text-decoration-none">Get Involved</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-4">
+        <h5 style="font-family: 'Poppins', sans-serif; color:#af9a7d;">Contact Us</h5>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 0.95rem;">
+          <i class="bi bi-geo-alt-fill me-2"></i> Jaitpur, Faridabad
+        </p>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 0.95rem;">
+          <i class="bi bi-envelope-fill me-2"></i> shardalibrary@gmail.com
+        </p>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 0.95rem;">
+          <i class="bi bi-telephone-fill me-2"></i> +91-97110 01198
         </p>
       </div>
+    </div>
 
-      <!-- Column 3: Contact -->
-      <div class="col-md-4 text-center text-md-end">
-        <h5>Contact</h5>
-        <p>
-        Phone: +91-70117 07523</p>
-      </div>
+    <!-- Divider -->
+    <hr style="border-color: #af9a7d;">
+
+    <!-- Copyright -->
+    <div class="text-center" style="font-family: 'Poppins', sans-serif; font-size: 0.9rem;">
+      © 2026 Sharda Library. All Rights Reserved.
     </div>
   </div>
 </footer>
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap + Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
