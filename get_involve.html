@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inquiry Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .form-container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .form-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-header h1 {
+      color: #af9a7d;
+      font-weight: bold;
+    }
+    .form-header p {
+      color: #555;
+    }
+    .form-control {
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    .btn-submit {
+      background-color: #af9a7d;
+      border: none;
+      padding: 10px 30px;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      color: #fff;
+    }
+    .btn-submit:hover {
+      background-color: #967f62;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <!-- Logo + Company Info -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <img src="https://www.jotform.com/uploads/ugurg/form_files/Asset%2020%402x.63fdb724af9a48.55371022.png" 
+           alt="Logo" height="60">
+      <div class="text-end">
+        <strong>Sharda Library</strong><br>
+        <span style="font-size:10pt;">Jaitpur, Faridabad</span><br>
+        <span style="font-size:10pt;">shardalibrary@gmail.com</span><br>
+        <span style="font-size:10pt;">www.shardalibrary.com</span><br>
+        <span style="font-size:10pt;">+91-9711001198</span>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <div class="form-header">
+      <h1>Inquiry Form</h1>
+      <p>We will get in touch with you shortly</p>
+    </div>
+
+    <!-- Form -->
+    <form action="#" method="post">
+      <div class="row">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="First Name" required>
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Last Name" required>
+        </div>
+      </div>
+      <input type="tel" class="form-control" placeholder="Phone Number" required>
+      <input type="email" class="form-control" placeholder="Your Email Address" required>
+      <textarea class="form-control" rows="5" placeholder="Leave Your Message"></textarea>
+      
+      <div class="text-center mt-3">
+        <button type="submit" class="btn-submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
