@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sharda Library Header</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="additional_css.css">
   <style>
     .info-block {
       border: 2px solid #af9a7d;
@@ -39,7 +40,15 @@
       text-decoration: none;
     }
   </style>
-  
+  <style>
+    .font-face {
+    font-family: 'Glacial Indifference';
+    src: url(/cdn/shop/files/Glacial_Indifference_Regular.woff?v=1770702936) format('woff'), url(/cdn/shop/files/Glacial_Indifference_Regular.woff?v=1770702936) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+  </style>
 </head>
 <body>
 
@@ -49,25 +58,52 @@
     <!-- Left Section: Hamburger Menu -->
     <nav class="navbar navbar-dark p-0">
   <div class="container-fluid p-0">
-    <!-- Toggle Button -->
-    <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   <!-- Toggle Button -->
+    <!-- <a class="navbar-brand" href="#">Sharda Library</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <!-- Logo / Title with gap -->
-    <div class="text-white fw-bold me-4" style="font-family: 'Poppins', sans-serif;">
-      Sharda Library
-    </div>
-    
-    <!-- Nav Links -->
-    <div class="collapse navbar-collapse text-start" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="features.html">Features</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="get_involve.html">Get Involved</a></li>
-      </ul>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Sharda Library</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link text-dark active font-face" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark font-face" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark font-face" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark font-face" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark font-face" href="#">Get Involve</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-dark" href="#">Action</a></li>
+              <li><a class="dropdown-item text-dark" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-dark" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+      </div>
     </div>
   </div>
 </nav>
@@ -137,7 +173,7 @@
        style="background-color:#af9a7d; border:none; font-family: 'Poppins', sans-serif;">
        Learn More
     </a> -->
-    <a href="contact.html" class="btn btn-outline-light btn-lg px-4" 
+    <a href="get_involve.html" class="btn btn-outline-light btn-lg px-4" 
        style="font-family: 'Poppins', sans-serif;">
        Join Us
     </a>
@@ -150,45 +186,49 @@
     <h2 class="text-center mb-5" style="font-family: 'montserrat', sans-serif; color:#af9a7d;">
       Our Gallery
     </h2>
-    <div class="row g-4">
+
+    <!-- Bootstrap Carousel with Auto-play -->
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
       
-      <!-- Gallery Item -->
-      <div class="col-md-4">
-        <div class="card border-0 shadow-sm">
-          <img src="WhatsApp Image 2026-04-13 at 17.49.38.jpeg" class="card-img-top gallery-img" alt="Library Interior">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5"></button>
+      </div>
+
+      <!-- Carousel Items -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="WhatsApp Image 2026-04-13 at 17.49.38.jpeg" class="d-block w-100 gallery-img" alt="Library Interior">
+        </div>
+        <div class="carousel-item">
+          <img src="WhatsApp Image 2026-04-13 at 17.49.45.jpeg" class="d-block w-100 gallery-img" alt="Study Area">
+        </div>
+        <div class="carousel-item">
+          <img src="WhatsApp Image 2026-04-13 at 17.49.39.jpeg" class="d-block w-100 gallery-img" alt="Bookshelves">
+        </div>
+        <div class="carousel-item">
+          <img src="WhatsApp Image 2026-04-13 at 17.49.40.jpeg" class="d-block w-100 gallery-img" alt="Reading Room">
+        </div>
+        <div class="carousel-item">
+          <img src="WhatsApp Image 2026-04-13 at 17.49.41.jpeg" class="d-block w-100 gallery-img" alt="Newspapers Section">
+        </div>
+        <div class="carousel-item">
+          <img src="WhatsApp Image 2026-04-13 at 17.49.43.jpeg" class="d-block w-100 gallery-img" alt="Computer Area">
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card border-0 shadow-sm">
-          <img src="WhatsApp Image 2026-04-13 at 17.49.45.jpeg" class="card-img-top gallery-img" alt="Study Area">
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card border-0 shadow-sm">
-          <img src="WhatsApp Image 2026-04-13 at 17.49.39.jpeg" class="card-img-top gallery-img" alt="Bookshelves">
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card border-0 shadow-sm">
-          <img src="WhatsApp Image 2026-04-13 at 17.49.40.jpeg" class="card-img-top gallery-img" alt="Reading Room">
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card border-0 shadow-sm">
-          <img src="WhatsApp Image 2026-04-13 at 17.49.41.jpeg" class="card-img-top gallery-img" alt="Newspapers Section">
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card border-0 shadow-sm">
-          <img src="WhatsApp Image 2026-04-13 at 17.49.43.jpeg" class="card-img-top gallery-img" alt="Computer Area">
-        </div>
-      </div>
-
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
   </div>
 </section>
@@ -196,10 +236,10 @@
 <!-- CSS for uniform image size -->
 <style>
   .gallery-img {
-    height: 250px;          /* Fixed height for all images */
+    height: 450px;          /* Bigger height for carousel */
     object-fit: cover;      /* Crop/scale image to fit */
     width: 100%;            /* Full width */
-    border-radius: 5px;     /* Rounded corners for clean look */
+    border-radius: 5px;     /* Rounded corners */
   }
 </style>
 
@@ -427,7 +467,7 @@
 </section>
 
 <!-- WhatsApp Floating Icon -->
-<a href="https://wa.me/919711001198" target="_blank" class="whatsapp-float">
+<a href="https://wa.me/7011707523" target="_blank" class="whatsapp-float">
   <i class="bi bi-whatsapp"></i>
 </a>
 
