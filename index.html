@@ -6,136 +6,57 @@
   <title>Sharda Library Header</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="additional_css.css">
- 
+
   <style>
-    .info-block {
-      border: 2px solid #af9a7d;
-      padding: 8px 12px;
-      display: flex;
-      align-items: center;
-      margin-right: 20px;
-    }
-    .info-block img {
-      height: 30px;
-      margin-right: 10px;
-    }
-    .info-block h6 {
-      margin: 0;
-      color: #af9a7d;
-      font-weight: bold;
-    }
-    .info-block p {
-      margin: 0;
-      color: #fff;
-    }
-    .social-icons a {
-      color: #af9a7d;
-      background: #fff;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 35px;
-      height: 35px;
-      margin-left: 10px;
-      text-decoration: none;
-    }
-    p {
-    font-family:Glacial Indifference; 
-    }
-
-   /* Collapse button border remove */
-.navbar-toggler {
-  border: none !important;
-  box-shadow: none !important;
+    /* Info block styling */
+.info-block {
+  border: 2px solid #af9a7d;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
 }
-
-/* Nav links hover effect */
-.navbar-nav .nav-link {
-  transition: all 0.3s ease;
+.info-block img {
+  height: 30px;
+  margin-right: 10px;
 }
-
-.navbar-nav .nav-link:hover {
-  /* box-shadow: 0px 2px 8px rgba(0,0,0,0.4); */
-  box-shadow:none;
-  border-radius: none; /* optional for smooth corners */
-  background-color: rgba(18, 18, 18, 0.1); /* dark shady effect with opacity */
-  text-align:center;
-  padding:.8rem 3rem
-}
-
-  </style>
-  <style>
-    .font-face {
-    font-family: 'inherit';
-    src: url(/cdn/shop/files/Glacial_Indifference_Regular.woff?v=1770702936) format('woff'), url(/cdn/shop/files/Glacial_Indifference_Regular.woff?v=1770702936) format('woff2');
-    font-weight: 400;
-    font-style: 'normal';
-    font-display: swap;
-}
-  </style>
-  <style>/* Import Glacial Indifference font */
-@import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap');
-
-/* Apply globally */
-body, * {
-  font-family: 'Glacial Indifference';
-}
-
-/* Hero area ko exclude karna */
-.hero-area, .hero-area * {
-  font-family: 'Montserrat', sans-serif; /* ya jo bhi font aap hero ke liye chahte ho */
-}
-</style>
-  <style>
-    /* Navbar links font size */
-.navbar-nav .nav-link {
-  font-size: 1.6rem !important;
-  font-family: 'inherit'; /* aapka chosen font */
-  font-style:'normal';
-  font-weight:'400';
-}
-
-    /* css newline add */
-    /* Collapse button border remove */
-.navbar-toggler {
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* Nav links hover effect */
-.navbar-nav .nav-link {
-  transition: all 0.3s ease;
-  font-size: 1.6rem !important;
-  font-family: 'Poppins';   /* sirf Poppins, sans-serif avoid */
-  font-style: normal;
+.info-block h6 {
+  margin: 0;
+  color: #af9a7d;
   font-weight: 400;
+  font-style: normal;
+  font-family: 'Inter', sans-serif;
 }
-
-.navbar-nav .nav-link:hover {
-  box-shadow: none;
-  background-color: rgba(18, 18, 18, 0.1); /* dark shady effect with opacity */
-  text-align: center;
-  padding: .8rem 3rem;
-  border-radius: 4px; /* smooth corners */
-}
-
-/* Info block text */
-.info-block h6, 
 .info-block p {
-  font-family: 'Poppins';
+  margin: 0;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Social icons */
+.social-icons a {
+  color: #af9a7d;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+/* Paragraph font */
+p {
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
-/* Global font reset */
-body, * {
-    font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-}
-    /* additional css */
-  /* Collapse button border remove */
+/* Collapse button border remove */
 .navbar-toggler {
   border: none !important;
   box-shadow: none !important;
@@ -144,7 +65,7 @@ body, * {
 /* Nav links */
 .navbar-nav .nav-link {
   font-size: 1.6rem !important;
-  font-family: inherit;   /* parent font inherit karega */
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   transition: all 0.3s ease;
@@ -156,11 +77,36 @@ body, * {
   background-color: rgba(18, 18, 18, 0.1); /* dark shady effect with opacity */
   text-align: center;
   padding: .8rem 3rem;
-  border-radius: 4px; /* valid value, 'none' hata diya */
+  border-radius: 4px; /* smooth corners */
+}
+
+/* Font-face definition (optional if you host Inter yourself) */
+.font-face {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+/* Apply globally */
+body, * {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Hero area ko alag font dena ho to */
+.hero-area, .hero-area * {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
   </style>
-</head>
+  </head>
 <body class="font-face">
 
 <header class="bg-dark text-white py-3">
