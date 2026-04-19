@@ -133,6 +133,30 @@ body, * {
   font-style: normal;
   font-weight: 400;
 }
+    /* additional css */
+  /* Collapse button border remove */
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  font-size: 1.6rem !important;
+  font-family: inherit;   /* parent font inherit karega */
+  font-style: normal;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+/* Nav links hover effect */
+.navbar-nav .nav-link:hover {
+  box-shadow: none;
+  background-color: rgba(18, 18, 18, 0.1); /* dark shady effect with opacity */
+  text-align: center;
+  padding: .8rem 3rem;
+  border-radius: 4px; /* valid value, 'none' hata diya */
+}
 
   </style>
 </head>
