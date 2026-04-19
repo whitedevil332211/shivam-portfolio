@@ -66,6 +66,14 @@ body, * {
   font-family: 'Montserrat', sans-serif; /* ya jo bhi font aap hero ke liye chahte ho */
 }
 </style>
+  <style>
+    /* Navbar links font size */
+.navbar-nav .nav-link {
+  font-size: 1.4rem !important;
+  font-family: 'Poppins'; /* aapka chosen font */
+}
+
+  </style>
 </head>
 <body class="font-face">
 
@@ -87,35 +95,33 @@ body, * {
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link text-dark active font-face" aria-current="page" href="#"style="font-size:1.4rem">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark font-face" href="#">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark font-face" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark font-face" href="#">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark font-face" href="#">Get Involve</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-dark" href="#">Action</a></li>
-              <li><a class="dropdown-item text-dark" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item text-dark" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
+  <li class="nav-item">
+    <a class="nav-link text-dark active font-face" aria-current="page" href="#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark font-face" href="#">About Us</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark font-face" href="#">Features</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark font-face" href="#">Contact</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark font-face" href="#">Get Involve</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown
+    </a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item text-dark" href="#">Action</a></li>
+      <li><a class="dropdown-item text-dark" href="#">Another action</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item text-dark" href="#">Something else here</a></li>
+    </ul>
+  </li>
+</ul>
         <!-- <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
           <button class="btn btn-outline-success" type="submit">Search</button>
