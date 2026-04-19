@@ -198,14 +198,14 @@ body, * {
 </section>
 
 <!-- Gallery Section -->
-<section class="py-5 bg-light">
+<section class="py-5 bg-dark">
   <div class="container">
     <h2 class="text-center mb-5" style="font-family: 'Montserrat', sans-serif; color:#af9a7d;">
       Our Gallery
     </h2>
 
     <!-- First Carousel -->
-    <div id="galleryCarousel1" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="3000">
+    <div id="galleryCarousel1" class="carousel slide mb-3" data-bs-ride="carousel" data-bs-interval="3000">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#galleryCarousel1" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#galleryCarousel1" data-bs-slide-to="1"></button>
@@ -257,6 +257,15 @@ body, * {
     </div>
   </div>
 </section>
+
+<style>
+  .gallery-img {
+    height: 450px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+  }
+</style>
 
 <!-- CSS for uniform image size -->
 <style>
