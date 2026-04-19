@@ -198,19 +198,19 @@ body, * {
 </section>
 
 <!-- Gallery Section -->
-<section class="py-5 bg-dark">
-  <div class="container">
+<section class="py-5 bg-dark" 
+         style="background: url('https://excelpubliclibrary.com/wp-content/themes/studies/images/testimonial-bg.jpg') center/cover no-repeat; position: relative;">
+  
+  <!-- Dark Overlay -->
+  <div style="position:absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.7);"></div>
+
+  <div class="container" style="position: relative; z-index: 1;">
     <h2 class="text-center mb-5" style="font-family: 'Montserrat', sans-serif; color:#af9a7d;">
       Our Gallery
     </h2>
 
     <!-- First Carousel -->
     <div id="galleryCarousel1" class="carousel slide mb-3" data-bs-ride="carousel" data-bs-interval="3000">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#galleryCarousel1" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#galleryCarousel1" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#galleryCarousel1" data-bs-slide-to="2"></button>
-      </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="WhatsApp Image 2026-04-13 at 17.49.38.jpeg" class="d-block w-100 gallery-img" alt="Library Interior">
@@ -232,11 +232,6 @@ body, * {
 
     <!-- Second Carousel -->
     <div id="galleryCarousel2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#galleryCarousel2" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#galleryCarousel2" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#galleryCarousel2" data-bs-slide-to="2"></button>
-      </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="WhatsApp Image 2026-04-13 at 17.49.40.jpeg" class="d-block w-100 gallery-img" alt="Reading Room">
@@ -266,21 +261,6 @@ body, * {
     border-radius: 5px;
   }
 </style>
-
-<!-- CSS for uniform image size -->
-<style>
-  .gallery-img {
-    height: 450px;          /* Bigger height for carousel */
-    object-fit: cover;      /* Crop/scale image to fit */
-    width: 100%;            /* Full width */
-    border-radius: 5px;     /* Rounded corners */
-  }
-  .carousel-inner {
-  margin-bottom: 40px; /* dono carousels ke beech 40px gap */
-}
-
-</style>
-
 <!-- About Us Section -->
 <section class="py-5 bg-light">
   <div class="container">
