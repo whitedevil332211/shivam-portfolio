@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inquiry Form</title>
+  <title>Admission Form - Sharda Library</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 400;
       background-color: #f8f9fa;
     }
     .form-container {
-      max-width: 700px;
-      margin: 50px auto;
+      max-width: 900px;
+      margin: 40px auto;
       background: #fff;
       padding: 30px;
       border-radius: 8px;
@@ -20,18 +22,36 @@
     }
     .form-header {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
     .form-header h1 {
       color: #af9a7d;
-      font-weight: bold;
+      font-weight: 600;
     }
-    .form-header p {
-      color: #555;
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #af9a7d;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
-    .form-control {
+    .photo-box {
+      width: 120px;
+      height: 150px;
+      border: 2px solid #af9a7d;
       border-radius: 6px;
-      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f9fa;
+      font-size: 0.9rem;
+      color: #999;
+      margin-left: auto;
+    }
+    .terms {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 20px;
     }
     .btn-submit {
       background-color: #af9a7d;
@@ -49,39 +69,76 @@
 <body>
 
   <div class="form-container">
-    <!-- Logo + Company Info -->
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <img src="https://www.jotform.com/uploads/ugurg/form_files/Asset%2020%402x.63fdb724af9a48.55371022.png" 
-           alt="Logo" height="60">
-      <div class="text-end">
-        <strong>Sharda Library</strong><br>
-        <span style="font-size:10pt;">Jaitpur, Faridabad</span><br>
-        <span style="font-size:10pt;">shardalibrary@gmail.com</span><br>
-        <span style="font-size:10pt;">www.shardalibrary.com</span><br>
-        <span style="font-size:10pt;">+91-9711001198</span>
-      </div>
-    </div>
-
     <!-- Header -->
     <div class="form-header">
-      <h1>Inquiry Form</h1>
-      <p>We will get in touch with you shortly</p>
+      <h1>Admission Form</h1>
+      <p>Please fill in all required details carefully</p>
     </div>
 
     <!-- Form -->
     <form action="#" method="post">
-      <div class="row">
-        <div class="col-md-6">
-          <input type="text" class="form-control" placeholder="First Name" required>
-        </div>
-        <div class="col-md-6">
-          <input type="text" class="form-control" placeholder="Last Name" required>
-        </div>
-      </div>
+      <!-- Photo Upload Section -->
+<div class="row mb-3">
+  <!-- Left side: Personal details -->
+  <div class="col-md-9">
+    <div class="section-title">Personal Details</div>
+    <input type="text" class="form-control" placeholder="Full Name" required>
+    <input type="date" class="form-control" placeholder="Admission Date" required>
+    <input type="text" class="form-control" placeholder="Aadhar Number" required>
+    <input type="text" class="form-control" placeholder="Preparation (Exam/Study)" required>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="gender" value="Male"> Male
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="gender" value="Female"> Female
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="gender" value="Non-binary"> Non-binary
+    </div>
+  </div>
+
+  <!-- Right side: Photo box + upload button -->
+  <div class="col-md-3 d-flex flex-column align-items-center">
+    <div class="photo-box mb-2">
+      Passport Size Photo
+    </div>
+    <input type="file" class="form-control" id="photoUpload" accept="image/*">
+  </div>
+</div>
+
+      <!-- Contact Information -->
+      <div class="section-title">Contact Information</div>
+      <input type="email" class="form-control" placeholder="Email Address" required>
       <input type="tel" class="form-control" placeholder="Phone Number" required>
-      <input type="email" class="form-control" placeholder="Your Email Address" required>
-      <textarea class="form-control" rows="5" placeholder="Leave Your Message"></textarea>
-      
+      <input type="tel" class="form-control" placeholder="Whatsapp Number">
+      <input type="tel" class="form-control" placeholder="Parent Phone Number">
+
+      <!-- Address Details -->
+      <div class="section-title">Address Details</div>
+      <input type="text" class="form-control" placeholder="Address" required>
+      <input type="text" class="form-control" placeholder="City" required>
+      <input type="text" class="form-control" placeholder="PIN Code" required>
+
+      <!-- Purchase Preferences -->
+      <div class="section-title">Purchase Preferences</div>
+      <input type="text" class="form-control" placeholder="Amount" required>
+      <input type="text" class="form-control" placeholder="Seat Number" required>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="payment" value="Cash"> Cash
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="payment" value="Online Transfer"> Online Transfer
+      </div>
+
+      <!-- Terms -->
+      <div class="terms">
+        <strong>TERMS AND CONDITIONS:</strong><br>
+        - Fees are non-refundable and non-adjustable.<br>
+        - Disturbance or loitering outside the library will lead to cancellation without refund.<br>
+        - Seats will not be changed unless there is a strong reason.<br>
+        - One passport-sized photo and Aadhar card copy is required.
+      </div>
+
       <div class="text-center mt-3">
         <button type="submit" class="btn-submit">Submit</button>
       </div>
