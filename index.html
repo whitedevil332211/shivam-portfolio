@@ -27,6 +27,14 @@ header .container-fluid {
 .navbar .navbar-toggler {
   margin-left: 0;   /* left align */
   margin-right: auto;
+  position: relative;
+  left: 0;          /* force left side */
+}
+
+/* Collapse button style */
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* Navbar links */
@@ -42,6 +50,14 @@ header .container-fluid {
   .navbar-nav .nav-link {
     font-size: 1.4rem;
   }
+}
+
+/* Nav links hover effect */
+.navbar-nav .nav-link:hover {
+  background-color: rgba(18,18,18,0.1);
+  text-align: center;
+  padding: .8rem 3rem;
+  border-radius: 4px;
 }
 
 /* Offcanvas responsive fix */
@@ -61,6 +77,8 @@ header .container-fluid {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  margin-right: 20px;
+  border-radius: 6px;
 }
 .info-block img {
   height: 30px;
@@ -79,11 +97,11 @@ header .container-fluid {
 .info-block p {
   color: #fff;
 }
-@media (min-width: 768px) {
+@media (max-width: 576px) {
   .info-block {
-    flex: 0 0 auto;
-    margin-right: 20px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
+    margin-right: 0;
+    justify-content: flex-start;
   }
 }
 
@@ -99,6 +117,12 @@ header .container-fluid {
   height: 35px;
   margin-left: 10px;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+.social-icons a:hover {
+  background: #af9a7d;
+  color: #fff;
+  transform: scale(1.1);
 }
 
 /* Hero section responsive text */
@@ -127,12 +151,6 @@ header .container-fluid {
   }
 }
 
-/* Collapse button border remove */
-.navbar-toggler {
-  border: none !important;
-  box-shadow: none !important;
-}
-
 /* Big font */
 .big-font {
   font-family: 'Inter', sans-serif;
@@ -154,6 +172,18 @@ body, * {
   font-style: normal;
   font-weight: 400;
 }
+
+@media (max-width: 576px) {
+  .info-block {
+    justify-content: center;   /* center align content */
+    text-align: center;
+  }
+  .social-icons {
+    justify-content: center;   /* icons center align */
+    margin-top: 10px;
+  }
+}
+
 </style>
   
 </head>
