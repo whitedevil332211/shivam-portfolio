@@ -16,6 +16,47 @@ header .container,
   margin: 0 auto;      /* center align */
   padding: 0 15px;     /* side padding for mobile */
 }
+    /* Navbar fix */
+header .container-fluid {
+  max-width: 1140px;   /* Bootstrap container size */
+  margin: 0 auto;      /* center align */
+  padding: 0 15px;     /* side padding for mobile */
+}
+
+/* Navbar links responsive */
+.navbar-nav .nav-link {
+  font-size: 1rem;     /* mobile par chhota */
+  white-space: nowrap; /* text wrap na ho */
+}
+@media (min-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 1.4rem; /* tablet/desktop par bada */
+  }
+}
+
+/* Offcanvas responsive fix */
+.offcanvas {
+  max-width: 80%;      /* mobile par offcanvas width */
+}
+@media (min-width: 992px) {
+  .offcanvas {
+    max-width: 400px;  /* desktop par fixed width */
+  }
+}
+
+/* Info blocks responsive */
+.info-block {
+  flex: 1 1 100%;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .info-block {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+
 
 /* Hero section responsive text */
 .hero h1 {
