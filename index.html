@@ -16,17 +16,22 @@ header .container,
   margin: 0 auto;      /* center align */
   padding: 0 15px;     /* side padding for mobile */
 }
-    /* Navbar fix */
+
+/* Navbar fix */
 header .container-fluid {
-  max-width: 1140px;   /* Bootstrap container size */
-  margin: 0 auto;      /* center align */
-  padding: 0 15px;     /* side padding for mobile */
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-/* Navbar links responsive */
+/* Navbar links */
 .navbar-nav .nav-link {
-  font-size: 1rem;     /* mobile par chhota */
-  white-space: nowrap; /* text wrap na ho */
+  font-size: 1rem; /* mobile par chhota */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 @media (min-width: 768px) {
   .navbar-nav .nav-link {
@@ -36,111 +41,45 @@ header .container-fluid {
 
 /* Offcanvas responsive fix */
 .offcanvas {
-  max-width: 80%;      /* mobile par offcanvas width */
+  max-width: 80%; /* mobile par offcanvas width */
 }
 @media (min-width: 992px) {
   .offcanvas {
-    max-width: 400px;  /* desktop par fixed width */
+    max-width: 400px; /* desktop par fixed width */
   }
 }
 
-/* Info blocks responsive */
-.info-block {
-  flex: 1 1 100%;
-  margin-bottom: 10px;
-}
-@media (min-width: 768px) {
-  .info-block {
-    flex: 0 0 auto;
-    margin-right: 20px;
-    margin-bottom: 0;
-  }
-}
-
-
-/* Hero section responsive text */
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem); /* mobile se desktop tak adjust */
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-}
-.hero p {
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-}
-
-/* Navbar responsive */
-.navbar-nav .nav-link {
-  font-size: 1rem; /* mobile par chhota */
-}
-@media (min-width: 768px) {
-  .navbar-nav .nav-link {
-    font-size: 1.4rem; /* tablet/desktop par bada */
-  }
-}
-
-/* Carousel spacing */
-.carousel {
-  margin-bottom: 2rem;
-}
-@media (max-width: 576px) {
-  .carousel img {
-    height: auto;
-    max-height: 250px; /* mobile par image height limit */
-    object-fit: cover;
-  }
-}
-
-/* Info blocks responsive */
-.info-block {
-  flex: 1 1 100%;
-  margin-bottom: 10px;
-}
-@media (min-width: 768px) {
-  .info-block {
-    flex: 0 0 auto;
-    margin-right: 20px;
-    margin-bottom: 0;
-  }
-}
-
-    
-  /* big-font */
-.big-font {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;   /* 450 invalid hai, 400 standard normal weight hai */
-  font-size: 3rem !important; /* bada size */
-}
-
-    /* Info block styling */
+/* Info blocks */
 .info-block {
   border: 2px solid #af9a7d;
   padding: 8px 12px;
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  margin-bottom: 10px;
 }
 .info-block img {
   height: 30px;
   margin-right: 10px;
 }
-.info-block h6 {
-  margin: 0;
-  color: #af9a7d;
-  font-weight: 400;
-  font-style: normal;
-  font-family: 'Inter', sans-serif;
-}
+.info-block h6,
 .info-block p {
   margin: 0;
-  color: #fff;
-  font-weight: 400;
-  font-style: normal;
   font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.info-block h6 {
+  color: #af9a7d;
+}
+.info-block p {
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .info-block {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
 }
 
 /* Social icons */
@@ -157,11 +96,30 @@ header .container-fluid {
   text-decoration: none;
 }
 
-/* Paragraph font */
-p {
+/* Hero section responsive text */
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
+}
+.hero p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Carousel spacing */
+.carousel {
+  margin-bottom: 2rem;
+}
+@media (max-width: 576px) {
+  .carousel img {
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+  }
 }
 
 /* Collapse button border remove */
@@ -170,43 +128,22 @@ p {
   box-shadow: none !important;
 }
 
-/* Nav links */
-.navbar-nav .nav-link {
-  font-size: 1.6rem !important;
+/* Big font */
+.big-font {
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: 350;
-  transition: all 0.3s ease;
-}
-
-/* Nav links hover effect */
-.navbar-nav .nav-link:hover {
-  box-shadow: none;
-  background-color: rgba(18, 18, 18, 0.1); /* dark shady effect with opacity */
-  text-align: center;
-  padding: .8rem 3rem;
-  border-radius: 4px; /* smooth corners */
-}
-
-/* Font-face definition (optional if you host Inter yourself) */
-.font-face {
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+  font-size: 3rem !important;
 }
 
-/* Import Inter font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
-
-/* Apply globally */
+/* Global font reset */
 body, * {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
-/* Hero area ko alag font dena ho to */
+/* Hero area special font */
 .hero-area, .hero-area * {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
