@@ -8,6 +8,65 @@
   <link rel="stylesheet" href="additional_css.css">
 
   <style>
+/* Global container fix */
+header .container,
+.hero .container,
+.gallery .container {
+  max-width: 1140px;   /* Bootstrap container size */
+  margin: 0 auto;      /* center align */
+  padding: 0 15px;     /* side padding for mobile */
+}
+
+/* Hero section responsive text */
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem); /* mobile se desktop tak adjust */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.hero p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Navbar responsive */
+.navbar-nav .nav-link {
+  font-size: 1rem; /* mobile par chhota */
+}
+@media (min-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 1.4rem; /* tablet/desktop par bada */
+  }
+}
+
+/* Carousel spacing */
+.carousel {
+  margin-bottom: 2rem;
+}
+@media (max-width: 576px) {
+  .carousel img {
+    height: auto;
+    max-height: 250px; /* mobile par image height limit */
+    object-fit: cover;
+  }
+}
+
+/* Info blocks responsive */
+.info-block {
+  flex: 1 1 100%;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .info-block {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+
+    
   /* big-font */
 .big-font {
   font-family: 'Inter', sans-serif;
